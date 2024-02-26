@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr2sps0f8wx3h"]
+
+[ext_resource type="Script" path="res://scenes/levels/level2/user_interface/HUD.gd" id="1_mmq4i"]
+
+[sub_resource type="SystemFont" id="SystemFont_vp05b"]
+font_names = PackedStringArray("Liberation Serif")
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_8sjri"]
+font_names = PackedStringArray("Liberation Serif")
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_u8g8p"]
+font_names = PackedStringArray("Liberation Serif")
+subpixel_positioning = 0
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_mmq4i")
+
+[node name="ScoreLabel" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 72.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_vp05b")
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Message" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.5
+offset_top = -36.0
+offset_right = 111.5
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_8sjri")
+theme_override_font_sizes/font_size = 32
+text = "Avoid the knifes!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Start_Button" type="Button" parent="."]
+custom_minimum_size = Vector2(120, 32)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -109.0
+offset_right = 60.0
+offset_bottom = -73.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = SubResource("SystemFont_u8g8p")
+theme_override_font_sizes/font_size = 24
+text = "Start Game"
+
+[node name="MessageTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="pressed" from="Start_Button" to="." method="_on_start_button_pressed"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]

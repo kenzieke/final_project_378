@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6mr74vxm53wc"]
+
+[ext_resource type="Texture2D" uid="uid://cye5luq034uuv" path="res://scenes/characters/mephisto_front.png" id="1_pxgr6"]
+[ext_resource type="Texture2D" uid="uid://t4p784a2wmt2" path="res://scenes/characters/mephisto_walking_side.png" id="2_q6e6r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ye4no"]
+atlas = ExtResource("2_q6e6r")
+region = Rect2(0, 0, 270, 370)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_neqsf"]
+atlas = ExtResource("2_q6e6r")
+region = Rect2(271, 0, 270, 370)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svhys"]
+atlas = ExtResource("2_q6e6r")
+region = Rect2(542, 0, 270, 370)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccafm"]
+atlas = ExtResource("2_q6e6r")
+region = Rect2(900, 0, 240, 370)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dhf87"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pxgr6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ye4no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_neqsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svhys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccafm")
+}],
+"loop": true,
+"name": &"mephisto_walking_side",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1t05x"]
+size = Vector2(34, 83.5)
+
+[node name="Mephisto" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-9.09495e-13, -5.96046e-08)
+scale = Vector2(0.288462, 0.288462)
+sprite_frames = SubResource("SpriteFrames_dhf87")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 10.25)
+shape = SubResource("RectangleShape2D_1t05x")

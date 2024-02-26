@@ -1,0 +1,89 @@
+[gd_scene load_steps=12 format=3 uid="uid://dvtc405gk8c5b"]
+
+[ext_resource type="Texture2D" uid="uid://0m17vqglchcr" path="res://tent.png" id="1_a1xfh"]
+[ext_resource type="Texture2D" uid="uid://u73d5t306b6x" path="res://transparent_block_floor.png" id="2_fp4yw"]
+[ext_resource type="Texture2D" uid="uid://hl8su35f1i2h" path="res://sand_block.png" id="3_gwelb"]
+[ext_resource type="PackedScene" uid="uid://b6mr74vxm53wc" path="res://scenes/characters/mephisto.tscn" id="4_g7qvr"]
+[ext_resource type="PackedScene" uid="uid://5k4mp57i80n4" path="res://scenes/characters/dante_level1.tscn" id="5_2r2rn"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bshtv"]
+texture = ExtResource("2_fp4yw")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fl7w0"]
+texture = ExtResource("3_gwelb")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_lejgh"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_bshtv")
+sources/2 = SubResource("TileSetAtlasSource_fl7w0")
+
+[sub_resource type="Animation" id="Animation_bonlc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mephisto:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(250, 530)]
+}
+
+[sub_resource type="Animation" id="Animation_gpsbk"]
+resource_name = "mephisto_walking_side"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mephisto:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-57, 540), Vector2(266, 540), Vector2(495, 540)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_805v4"]
+_data = {
+"RESET": SubResource("Animation_bonlc"),
+"mephisto_walking_side": SubResource("Animation_gpsbk")
+}
+
+[node name="Cut_Scene_1" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_a1xfh")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_lejgh")
+format = 2
+layer_0/tile_data = PackedInt32Array(2424832, 1, 0, 2424833, 1, 0, 2424834, 1, 0, 2424835, 1, 0, 2424836, 1, 0, 2424837, 1, 0, 2424838, 1, 0, 2424839, 1, 0, 2424840, 1, 0, 2424841, 1, 0, 2424842, 1, 0, 2424843, 1, 0, 2424844, 1, 0, 2424845, 1, 0, 2424846, 1, 0, 2424847, 1, 0, 2424848, 1, 0, 2424849, 1, 0, 2424850, 1, 0, 2424851, 1, 0, 2424852, 1, 0, 2424853, 1, 0, 2424854, 1, 0, 2424855, 1, 0, 2424856, 1, 0, 2424857, 1, 0, 2424858, 1, 0, 2424859, 1, 0, 2424860, 1, 0, 2424861, 1, 0, 2424862, 1, 0, 2424863, 1, 0, 2424864, 1, 0, 2424865, 1, 0, 2424866, 1, 0, 2424867, 1, 0, 2424868, 1, 0, 2424869, 1, 0, 2424870, 1, 0, 2424871, 1, 0, 2424872, 1, 0, 2424873, 1, 0, 2424874, 1, 0, 2424875, 1, 0, 2424876, 1, 0, 2424877, 1, 0, 2424878, 1, 0, 2424879, 1, 0, 2424880, 1, 0, 2424881, 1, 0, 2424882, 1, 0, 2424883, 1, 0, 2424884, 1, 0, 2424885, 1, 0, 2424886, 1, 0, 2424887, 1, 0, 2424888, 1, 0, 2424889, 1, 0, 2424890, 1, 0, 2424891, 1, 0, 2424892, 1, 0, 2424893, 1, 0, 2424894, 1, 0, 2490367, 1, 0, 2555903, 1, 0, 2621439, 1, 0, 2686975, 1, 0, 2621440, 1, 0, 2621441, 1, 0, 2621442, 1, 0, 2621443, 1, 0, 2621444, 1, 0, 2621445, 1, 0, 2621446, 1, 0, 2621447, 1, 0, 2621448, 1, 0, 2621449, 1, 0, 2621450, 1, 0, 2621451, 1, 0, 2621452, 1, 0, 2621453, 1, 0, 2621454, 1, 0, 2621455, 1, 0, 2621456, 1, 0, 2621457, 1, 0, 2621458, 1, 0, 2621459, 1, 0, 2621460, 1, 0, 2621461, 1, 0, 2621462, 1, 0, 2621463, 1, 0, 2621464, 1, 0, 2621465, 1, 0, 2621466, 1, 0, 2621467, 1, 0, 2621468, 1, 0, 2621469, 1, 0, 2621470, 1, 0, 2621471, 1, 0, 2621472, 1, 0, 2621473, 1, 0, 2621474, 1, 0, 2621475, 1, 0, 2621476, 1, 0, 2621477, 1, 0, 2555941, 1, 0, 2555942, 1, 0, 2555943, 1, 0, 2555944, 1, 0, 2621480, 1, 0, 2621481, 1, 0, 2621482, 1, 0, 2621479, 1, 0, 2621478, 1, 0, 2490368, 1, 0, 2555904, 1, 0, 2555905, 1, 0, 2555906, 1, 0, 2555907, 1, 0, 2555908, 1, 0, 2555909, 1, 0, 2555910, 1, 0, 2555911, 1, 0, 2490375, 1, 0, 2490374, 1, 0, 2490373, 1, 0, 2490372, 1, 0, 2490371, 1, 0, 2490370, 1, 0, 2490369, 1, 0, 2555912, 1, 0, 2555913, 1, 0, 2555914, 1, 0, 2555915, 1, 0, 2490379, 1, 0, 2490378, 1, 0, 2490377, 1, 0, 2490376, 1, 0, 2490380, 1, 0, 2490381, 1, 0, 2490382, 1, 0, 2490383, 1, 0, 2490384, 1, 0, 2490385, 1, 0, 2490386, 1, 0, 2490387, 1, 0, 2490388, 1, 0, 2490389, 1, 0, 2490390, 1, 0, 2490391, 1, 0, 2490392, 1, 0, 2490393, 1, 0, 2490394, 1, 0, 2490395, 1, 0, 2490396, 1, 0, 2490397, 1, 0, 2490398, 1, 0, 2490399, 1, 0, 2490400, 1, 0, 2490401, 1, 0, 2490402, 1, 0, 2490403, 1, 0, 2490404, 1, 0, 2490405, 1, 0, 2490406, 1, 0, 2490407, 1, 0, 2490408, 1, 0, 2490409, 1, 0, 2490411, 1, 0, 2490410, 1, 0, 2555937, 1, 0, 2555936, 1, 0, 2555935, 1, 0, 2555934, 1, 0, 2555933, 1, 0, 2555938, 1, 0, 2555939, 1, 0, 2555940, 1, 0, 2555932, 1, 0, 2555931, 1, 0, 2555930, 1, 0, 2555929, 1, 0, 2555928, 1, 0, 2555927, 1, 0, 2555926, 1, 0, 2555925, 1, 0, 2555924, 1, 0, 2555923, 1, 0, 2555922, 1, 0, 2555921, 1, 0, 2555920, 1, 0, 2555919, 1, 0, 2555918, 1, 0, 2555917, 1, 0, 2555916, 1, 0, 2490430, 1, 0, 2555966, 1, 0, 2555965, 1, 0, 2621501, 1, 0, 2621502, 1, 0, 2621500, 1, 0, 2621499, 1, 0, 2621498, 1, 0, 2621497, 1, 0, 2621496, 1, 0, 2621495, 1, 0, 2621494, 1, 0, 2621493, 1, 0, 2555956, 1, 0, 2555955, 1, 0, 2555954, 1, 0, 2555953, 1, 0, 2555952, 1, 0, 2555951, 1, 0, 2555950, 1, 0, 2555949, 1, 0, 2555948, 1, 0, 2555947, 1, 0, 2555946, 1, 0, 2555945, 1, 0, 2621483, 1, 0, 2621484, 1, 0, 2621485, 1, 0, 2621486, 1, 0, 2621487, 1, 0, 2621488, 1, 0, 2621489, 1, 0, 2621490, 1, 0, 2621491, 1, 0, 2621492, 1, 0, 2555964, 1, 0, 2490428, 1, 0, 2490429, 1, 0, 2490427, 1, 0, 2490426, 1, 0, 2490425, 1, 0, 2490424, 1, 0, 2490412, 1, 0, 2490413, 1, 0, 2490414, 1, 0, 2490415, 1, 0, 2490416, 1, 0, 2490417, 1, 0, 2490418, 1, 0, 2490419, 1, 0, 2490420, 1, 0, 2490421, 1, 0, 2490422, 1, 0, 2490423, 1, 0, 2555963, 1, 0, 2555962, 1, 0, 2555961, 1, 0, 2555960, 1, 0, 2555959, 1, 0, 2555958, 1, 0, 2555957, 1, 0, 2621503, 2, 0, 2555967, 2, 0, 2424895, 2, 0, 2490366, 2, 0, 2490365, 2, 0, 2490364, 2, 0, 2490363, 2, 0, 2490362, 2, 0, 2555898, 2, 0, 2621434, 2, 0, 2686970, 2, 0, 2686971, 2, 0, 2686972, 2, 0, 2686973, 2, 0, 2686974, 2, 0, 2621438, 2, 0, 2555902, 2, 0, 2555901, 2, 0, 2555900, 2, 0, 2555899, 2, 0, 2621435, 2, 0, 2621436, 2, 0, 2621437, 2, 0, 2621504, 2, 0, 2621505, 2, 0, 2621506, 2, 0, 2555970, 2, 0, 2490434, 2, 0, 2424898, 2, 0, 2424897, 2, 0, 2424896, 2, 0, 2490431, 2, 0, 2555968, 2, 0, 2555969, 2, 0, 2490433, 2, 0, 2490432, 2, 0, 2424899, 2, 0, 2490435, 2, 0, 2555971, 2, 0, 2621507, 2, 0)
+
+[node name="Mephisto" parent="." instance=ExtResource("4_g7qvr")]
+position = Vector2(250, 530)
+
+[node name="Dante" parent="." instance=ExtResource("5_2r2rn")]
+position = Vector2(1040, 541)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_805v4")
+}

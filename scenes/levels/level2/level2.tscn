@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://c6wvpoanjsqtn"]
+
+[ext_resource type="Script" path="res://scenes/levels/level2/level2.gd" id="1_3yldj"]
+[ext_resource type="PackedScene" uid="uid://cljrogr7c4m72" path="res://scenes/levels/level2/moving_objects/knife.tscn" id="2_ufn08"]
+[ext_resource type="PackedScene" uid="uid://c25qhtx6xt2q1" path="res://scenes/levels/level2/moving_objects/dante_level2.tscn" id="3_d01n3"]
+[ext_resource type="Texture2D" uid="uid://cmwlh47effbaf" path="res://scenes/levels/level2/images_level2/level2_background.png" id="3_mf36f"]
+[ext_resource type="PackedScene" uid="uid://cr2sps0f8wx3h" path="res://scenes/levels/level2/user_interface/HUD.tscn" id="5_g8cl8"]
+[ext_resource type="AudioStream" uid="uid://b1wb6a4f8lxto" path="res://scenes/levels/level2/audio_level2/cartoon-arrow-hit-6700.mp3" id="6_vauit"]
+[ext_resource type="AudioStream" uid="uid://bc7s05d5ntr5k" path="res://scenes/levels/level2/audio_level2/fantasy-pagan-medieval-cinematic-epic-war-battle-119770.mp3" id="7_wfptq"]
+
+[sub_resource type="Curve2D" id="Curve2D_0c1cd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1008, 0, 0, 0, 0, 0, 1008, 648, 0, 0, 0, 0, 0, 648, 0, 0, 0, 0, 0, 8)
+}
+point_count = 5
+
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_3yldj")
+knife_scene = ExtResource("2_ufn08")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1008.0
+offset_bottom = 648.0
+texture = ExtResource("3_mf36f")
+
+[node name="DanteLevel2" parent="." instance=ExtResource("3_d01n3")]
+
+[node name="KnifeTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="ScoreTimer" type="Timer" parent="."]
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(488, 308)
+
+[node name="KnifePath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_0c1cd")
+
+[node name="KnifeSpawnLocation" type="PathFollow2D" parent="KnifePath"]
+
+[node name="Hud" parent="." instance=ExtResource("5_g8cl8")]
+
+[node name="KnifeSounds" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_vauit")
+volume_db = 17.0
+
+[node name="Level2Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_wfptq")
+autoplay = true
+
+[connection signal="hit" from="DanteLevel2" to="." method="game_over"]
+[connection signal="timeout" from="KnifeTimer" to="." method="_on_knife_timer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="start_game" from="Hud" to="." method="new_game"]
