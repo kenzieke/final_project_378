@@ -30,7 +30,6 @@ func game_over():
 	knife_sounds.stop()
 
 func new_game():
-	if score != 60:
 		score = 0
 		player.start(start_position.position)
 		start_timer.start()
@@ -38,9 +37,8 @@ func new_game():
 		hud.show_message("Get Ready")
 		get_tree().call_group("knives", "queue_free")
 		knife_sounds.play()
-	else:
 		# CHANGE THIS TO SCENE AFTER YOU WIN
-		get_tree().change_scene_to_packed(FEAR_SCENE)
+		#get_tree().change_scene_to_packed(FEAR_SCENE)
 
 func _on_knife_timer_timeout():
 	# Create a new instance of the Mob scene.
@@ -68,6 +66,8 @@ func _on_knife_timer_timeout():
 func _on_score_timer_timeout():
 	score += 1
 	hud.update_score(score)
+	if score == 60:
+		get_tree().change_scene_to_packed(FEAR_SCENE)
 
 func _on_start_timer_timeout():
 	knife_timer.start()
