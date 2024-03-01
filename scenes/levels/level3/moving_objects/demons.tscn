@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://cbbpvxo35xmou"]
+
+[ext_resource type="Script" path="res://scenes/levels/level3/moving_objects/demons.gd" id="1_gql7v"]
+[ext_resource type="Texture2D" uid="uid://c8ojag2ugfa0q" path="res://scenes/levels/level3/images_level3/BatAttack.png" id="2_e2042"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xa2f2"]
+atlas = ExtResource("2_e2042")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s576h"]
+atlas = ExtResource("2_e2042")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jiyow"]
+atlas = ExtResource("2_e2042")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gn0x"]
+atlas = ExtResource("2_e2042")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1l7y7"]
+atlas = ExtResource("2_e2042")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvy71"]
+atlas = ExtResource("2_e2042")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qe52w"]
+atlas = ExtResource("2_e2042")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d35yd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xa2f2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s576h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jiyow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gn0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1l7y7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvy71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qe52w")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uos2k"]
+size = Vector2(24, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_84fbk"]
+size = Vector2(32, 23)
+
+[node name="Demons" type="CharacterBody2D"]
+scale = Vector2(2.35327, 2.35327)
+script = ExtResource("1_gql7v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(16.5, 16.5)
+scale = Vector2(1.03125, 1.03125)
+sprite_frames = SubResource("SpriteFrames_d35yd")
+animation = &"fly"
+autoplay = "fly"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 11.5)
+shape = SubResource("RectangleShape2D_uos2k")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(16, 11.5)
+shape = SubResource("RectangleShape2D_84fbk")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

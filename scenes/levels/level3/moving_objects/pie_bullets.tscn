@@ -6,9 +6,11 @@
 radius = 15.1327
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xbw7e"]
-radius = 15.0
+radius = 18.0278
 
 [node name="PieBullets" type="RigidBody2D"]
+gravity_scale = 0.5
+lock_rotation = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(18, 20)

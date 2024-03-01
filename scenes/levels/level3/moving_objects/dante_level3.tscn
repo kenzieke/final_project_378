@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgjf7gb52da0u"]
+[gd_scene load_steps=7 format=3 uid="uid://bgjf7gb52da0u"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/moving_objects/dante_level3.gd" id="1_v5wmj"]
 [ext_resource type="Texture2D" uid="uid://c6dlliw5dwfux" path="res://scenes/levels/level3/images_level3/car_top_down.png" id="2_w108j"]
@@ -7,6 +7,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hv60r"]
 size = Vector2(45, 76.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ao4t"]
+size = Vector2(32.0865, 20.9979)
 
 [node name="DanteLevel3" type="Area2D"]
 script = ExtResource("1_v5wmj")
@@ -29,4 +32,12 @@ volume_db = -20.0
 stream = ExtResource("11_qbdah")
 volume_db = -15.0
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(28, 39)
+scale = Vector2(1.93227, 4.3814)
+shape = SubResource("RectangleShape2D_4ao4t")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

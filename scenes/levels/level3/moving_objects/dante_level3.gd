@@ -40,14 +40,11 @@ func fire():
 	#bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
 	bullet_instance.linear_velocity = Vector2(bullet_speed,0).rotated(rotation)
 	get_tree().get_root().call_deferred("add_child", bullet_instance)
-
-#func _on_body_entered(body):
-	#hide() # Player disappears after being hit.
-	#hit.emit()
-	## Must be deferred as we can't change physics properties on a physics callback.
-	#collision_shape_2d.set_deferred("disabled", true)
 	
-#func start(pos):
-	#position = pos
-	#show()
-	#$CollisionShape2D.disabled = false
+func kill():
+	get_tree().reload_current_scene()
+
+
+func _on_area_2d_body_entered(body):
+	if "Demons" in body.name:
+		kill()
