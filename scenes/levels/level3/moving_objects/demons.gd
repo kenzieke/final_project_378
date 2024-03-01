@@ -17,7 +17,7 @@ func _physics_process(delta):
 	bat.flip_h = true
 	
 	var DanteLevel3 = get_parent().get_node("DanteLevel3")
-	position += (DanteLevel3.position - position)/50
+	position += (DanteLevel3.position - position)/100
 	look_at(DanteLevel3.position)
 	
 
