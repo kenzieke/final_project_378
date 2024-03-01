@@ -303,16 +303,8 @@ position = Vector2(-1418, 936)
 [node name="Demons" parent="." instance=ExtResource("4_a1600")]
 position = Vector2(-742, 991)
 
-[node name="Demons2" parent="." instance=ExtResource("4_a1600")]
-position = Vector2(1305, -575)
-scale = Vector2(5.53787, 5.53787)
-
 [node name="Demons3" parent="." instance=ExtResource("4_a1600")]
 position = Vector2(-238, 686)
-
-[node name="Demons4" parent="." instance=ExtResource("4_a1600")]
-position = Vector2(1303, 843)
-scale = Vector2(5.53787, 5.53787)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ccn3w")
@@ -321,10 +313,6 @@ layer_0/tile_data = PackedInt32Array(-2621505, 2, 0, -2555969, 2, 1, -2490433, 2
 
 [node name="Demons5" parent="." instance=ExtResource("4_a1600")]
 position = Vector2(11, 1167)
-
-[node name="Demons6" parent="." instance=ExtResource("4_a1600")]
-position = Vector2(1476, 529)
-scale = Vector2(5.53787, 5.53787)
 
 [node name="Demons7" parent="." instance=ExtResource("4_a1600")]
 position = Vector2(543, 156)
