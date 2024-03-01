@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l7wluishkaky"
-path="res://.godot/imported/staff_bigger.png-98bf1246e5ba4b985d6f58690c61fc89.ctex"
+uid="uid://dlkss6rdx3s06"
+path="res://.godot/imported/dante_climbing.png-561cfd3628c7cba997cebc6793014b34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/level1/staff_bigger.png"
-dest_files=["res://.godot/imported/staff_bigger.png-98bf1246e5ba4b985d6f58690c61fc89.ctex"]
+source_file="res://scenes/levels/level1/level1_images/dante_climbing.png"
+dest_files=["res://.godot/imported/dante_climbing.png-561cfd3628c7cba997cebc6793014b34.ctex"]
 
 [params]
 

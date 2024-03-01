@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ola21xr62aom"
-path="res://.godot/imported/tent_background_inside.png-f6d2a97cce83adeed7c82e1368eb03c0.ctex"
+path="res://.godot/imported/tent_background_inside.png-48aec947dd0413448d5d77b6c7615929.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/level1/tent_background_inside.png"
-dest_files=["res://.godot/imported/tent_background_inside.png-f6d2a97cce83adeed7c82e1368eb03c0.ctex"]
+source_file="res://scenes/levels/level1/level1_images/tent_background_inside.png"
+dest_files=["res://.godot/imported/tent_background_inside.png-48aec947dd0413448d5d77b6c7615929.ctex"]
 
 [params]
 

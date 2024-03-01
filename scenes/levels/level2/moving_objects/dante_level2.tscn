@@ -1,31 +1,31 @@
 [gd_scene load_steps=40 format=3 uid="uid://c25qhtx6xt2q1"]
 
 [ext_resource type="Script" path="res://scenes/levels/level2/moving_objects/dante_level2.gd" id="1_xvlwe"]
-[ext_resource type="Texture2D" uid="uid://dlkss6rdx3s06" path="res://scenes/levels/level1/dante_climbing.png" id="2_lqs8m"]
-[ext_resource type="Texture2D" uid="uid://dk4632dk1jwyw" path="res://scenes/levels/level1/dante_front.png" id="3_g1kiy"]
+[ext_resource type="Texture2D" uid="uid://dlkss6rdx3s06" path="res://scenes/levels/level1/level1_images/dante_climbing.png" id="2_in7yy"]
+[ext_resource type="Texture2D" uid="uid://dk4632dk1jwyw" path="res://scenes/levels/level1/level1_images/dante_front.png" id="3_g1bfm"]
 [ext_resource type="Texture2D" uid="uid://cpbwrae5cp3dt" path="res://scenes/characters/dante_jumping.png" id="4_hjsh7"]
 [ext_resource type="Texture2D" uid="uid://w7vqt0h0vykt" path="res://scenes/characters/dante_jumping_air.png" id="5_33iyp"]
 [ext_resource type="Texture2D" uid="uid://bqnw0tqobsx8i" path="res://scenes/characters/dante_jumping_landed.png" id="6_st78e"]
-[ext_resource type="Texture2D" uid="uid://hgdknkjhtbhk" path="res://scenes/levels/level1/dante_walking_side.png" id="7_2uo5y"]
+[ext_resource type="Texture2D" uid="uid://hgdknkjhtbhk" path="res://scenes/levels/level1/level1_images/dante_walking_side.png" id="7_jeenu"]
 [ext_resource type="Texture2D" uid="uid://culfqle2ymp7p" path="res://scenes/levels/level2/images_level2/dante_walking_up.png" id="8_mtvwl"]
 [ext_resource type="AudioStream" uid="uid://cyr8h21r7pjnu" path="res://audio/squeaky-toy-1-6059.mp3" id="8_yskam"]
 [ext_resource type="AudioStream" uid="uid://dxorvkxsmku5b" path="res://audio/funny-spring-jump-140378.mp3" id="9_k5mk5"]
 [ext_resource type="Texture2D" uid="uid://74enimmmmy4f" path="res://scenes/levels/level2/images_level2/dante_walking_up_real.png" id="9_kqk3y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tgt56"]
-atlas = ExtResource("2_lqs8m")
+atlas = ExtResource("2_in7yy")
 region = Rect2(0, 0, 220, 220)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fin5i"]
-atlas = ExtResource("2_lqs8m")
+atlas = ExtResource("2_in7yy")
 region = Rect2(220, 0, 220, 220)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_65a0g"]
-atlas = ExtResource("2_lqs8m")
+atlas = ExtResource("2_in7yy")
 region = Rect2(440, 0, 220, 220)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sy1pr"]
-atlas = ExtResource("2_lqs8m")
+atlas = ExtResource("2_in7yy")
 region = Rect2(660, 0, 220, 220)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_358e7"]
@@ -85,19 +85,19 @@ atlas = ExtResource("6_st78e")
 region = Rect2(540, 0, 180, 210)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8rr7c"]
-atlas = ExtResource("7_2uo5y")
+atlas = ExtResource("7_jeenu")
 region = Rect2(0, 0, 202, 230)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hu35g"]
-atlas = ExtResource("7_2uo5y")
+atlas = ExtResource("7_jeenu")
 region = Rect2(202, 0, 202, 230)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sjve4"]
-atlas = ExtResource("7_2uo5y")
+atlas = ExtResource("7_jeenu")
 region = Rect2(404, 0, 202, 230)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lqm7v"]
-atlas = ExtResource("7_2uo5y")
+atlas = ExtResource("7_jeenu")
 region = Rect2(606, 0, 202, 230)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jg2kt"]
@@ -137,7 +137,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_g1kiy")
+"texture": ExtResource("3_g1bfm")
 }],
 "loop": true,
 "name": &"idle",

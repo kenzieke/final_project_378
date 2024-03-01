@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwsuphj2omuwd"
-path="res://.godot/imported/rope.png-ff3e4befb79c2d0534d96ff5becdf4b7.ctex"
+path="res://.godot/imported/rope.png-64ec398470be293682cf75b3e84277bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/level1/rope.png"
-dest_files=["res://.godot/imported/rope.png-ff3e4befb79c2d0534d96ff5becdf4b7.ctex"]
+source_file="res://scenes/levels/level1/level1_images/rope.png"
+dest_files=["res://.godot/imported/rope.png-64ec398470be293682cf75b3e84277bb.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4hkkhsacyy4d"
-path="res://.godot/imported/ladder_stair.png-86e5b8ece2f60f96181c841d3974a981.ctex"
+uid="uid://bsn1coo04pb7q"
+path="res://.godot/imported/purple_rope.png-69284fd1c3fc97c36a8758b1e792300f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/level1/ladder_stair.png"
-dest_files=["res://.godot/imported/ladder_stair.png-86e5b8ece2f60f96181c841d3974a981.ctex"]
+source_file="res://scenes/levels/level1/level1_images/purple_rope.png"
+dest_files=["res://.godot/imported/purple_rope.png-69284fd1c3fc97c36a8758b1e792300f.ctex"]
 
 [params]
 

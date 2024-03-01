@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dunu5cplokm31"]
 
 [ext_resource type="Script" path="res://scenes/characters/staff.gd" id="1_pbwdv"]
-[ext_resource type="Texture2D" uid="uid://l7wluishkaky" path="res://scenes/levels/level1/staff_bigger.png" id="1_yn8rb"]
+[ext_resource type="Texture2D" uid="uid://l7wluishkaky" path="res://scenes/levels/level1/level1_images/staff_bigger.png" id="1_yn8rb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6cxs5"]
 radius = 4.24264

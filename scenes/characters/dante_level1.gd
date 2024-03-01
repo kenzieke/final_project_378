@@ -6,8 +6,7 @@ const JUMP_VELOCITY = -700.0
 @onready var dante = $AnimatableBody2D
 @onready var walk_sound = $AudioStreamPlayer2D
 @onready var jump_sound = $AudioStreamPlayer2D2
-@export var end_game = preload("res://scenes/mainmenu/end_scene.tscn") as PackedScene 
-var staff = 0
+@export var end_level1 = preload("res://scenes/levels/level1/end_level1.tscn") as PackedScene 
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -47,6 +46,6 @@ func _physics_process(delta):
 	
 			
 func GetStaff():
-	staff += 1
-	print(staff)
-	get_tree().change_scene_to_packed(end_game)
+	global.staff += 1
+	print(global.staff)
+	get_tree().change_scene_to_packed(end_level1)

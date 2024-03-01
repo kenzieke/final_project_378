@@ -6,6 +6,7 @@ extends Control
 
 
 func _ready():
+	global.rule_scene = 1
 	ready_button.button_down.connect(on_ready_pressed)
 
 func on_ready_pressed() -> void:

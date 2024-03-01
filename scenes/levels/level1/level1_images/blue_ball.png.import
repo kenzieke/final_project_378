@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df13and4hfeb8"
-path="res://.godot/imported/green_platform.png-0ff88add240b266adfe270c21095829a.ctex"
+uid="uid://c0kaymdifftyb"
+path="res://.godot/imported/blue_ball.png-b94165cd0181fa575ba7b9cb7dc52d39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/level1/green_platform.png"
-dest_files=["res://.godot/imported/green_platform.png-0ff88add240b266adfe270c21095829a.ctex"]
+source_file="res://scenes/levels/level1/level1_images/blue_ball.png"
+dest_files=["res://.godot/imported/blue_ball.png-b94165cd0181fa575ba7b9cb7dc52d39.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk4632dk1jwyw"
-path="res://.godot/imported/dante_front.png-5662dc1bebe8bf8e79a34a122cc6d8dd.ctex"
+uid="uid://dm7jfyrxv56bf"
+path="res://.godot/imported/tightrope.png-e848050bc1c3eb19a457c3632012538e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/level1/dante_front.png"
-dest_files=["res://.godot/imported/dante_front.png-5662dc1bebe8bf8e79a34a122cc6d8dd.ctex"]
+source_file="res://scenes/levels/level1/level1_images/tightrope.png"
+dest_files=["res://.godot/imported/tightrope.png-e848050bc1c3eb19a457c3632012538e.ctex"]
 
 [params]
 

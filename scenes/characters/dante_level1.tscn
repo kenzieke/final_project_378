@@ -1,12 +1,12 @@
 [gd_scene load_steps=34 format=3 uid="uid://5k4mp57i80n4"]
 
 [ext_resource type="Script" path="res://scenes/characters/dante_level1.gd" id="1_ym31n"]
-[ext_resource type="Texture2D" uid="uid://dlkss6rdx3s06" path="res://scenes/levels/level1/dante_climbing.png" id="2_5p883"]
-[ext_resource type="Texture2D" uid="uid://dk4632dk1jwyw" path="res://scenes/levels/level1/dante_front.png" id="3_4g612"]
+[ext_resource type="Texture2D" uid="uid://dlkss6rdx3s06" path="res://scenes/levels/level1/level1_images/dante_climbing.png" id="2_5p883"]
+[ext_resource type="Texture2D" uid="uid://dk4632dk1jwyw" path="res://scenes/levels/level1/level1_images/dante_front.png" id="3_4g612"]
 [ext_resource type="Texture2D" uid="uid://cpbwrae5cp3dt" path="res://scenes/characters/dante_jumping.png" id="4_x2arw"]
 [ext_resource type="Texture2D" uid="uid://w7vqt0h0vykt" path="res://scenes/characters/dante_jumping_air.png" id="5_so5lv"]
 [ext_resource type="Texture2D" uid="uid://bqnw0tqobsx8i" path="res://scenes/characters/dante_jumping_landed.png" id="6_ljoow"]
-[ext_resource type="Texture2D" uid="uid://hgdknkjhtbhk" path="res://scenes/levels/level1/dante_walking_side.png" id="7_7270y"]
+[ext_resource type="Texture2D" uid="uid://hgdknkjhtbhk" path="res://scenes/levels/level1/level1_images/dante_walking_side.png" id="7_7270y"]
 [ext_resource type="AudioStream" uid="uid://cyr8h21r7pjnu" path="res://audio/squeaky-toy-1-6059.mp3" id="8_w8f3c"]
 [ext_resource type="AudioStream" uid="uid://dxorvkxsmku5b" path="res://audio/funny-spring-jump-140378.mp3" id="9_vdfdi"]
 

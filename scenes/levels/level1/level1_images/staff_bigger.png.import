@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w5sf8dh6ln6"
-path="res://.godot/imported/ladder_stair_2.png-cad39b66faa461865e0eb5e939cd6715.ctex"
+uid="uid://l7wluishkaky"
+path="res://.godot/imported/staff_bigger.png-022078fccd2fef6d973544d86a89a06b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/level1/ladder_stair_2.png"
-dest_files=["res://.godot/imported/ladder_stair_2.png-cad39b66faa461865e0eb5e939cd6715.ctex"]
+source_file="res://scenes/levels/level1/level1_images/staff_bigger.png"
+dest_files=["res://.godot/imported/staff_bigger.png-022078fccd2fef6d973544d86a89a06b.ctex"]
 
 [params]
 

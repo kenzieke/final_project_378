@@ -37,8 +37,6 @@ func new_game():
 		hud.show_message("Get Ready")
 		get_tree().call_group("knives", "queue_free")
 		knife_sounds.play()
-		# CHANGE THIS TO SCENE AFTER YOU WIN
-		#get_tree().change_scene_to_packed(FEAR_SCENE)
 
 func _on_knife_timer_timeout():
 	# Create a new instance of the Mob scene.
