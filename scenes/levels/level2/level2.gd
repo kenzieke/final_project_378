@@ -14,13 +14,13 @@ var score
 const FEAR_SCENE = preload("res://scenes/levels/level2/dialogue_scenes/fear_scene.tscn")
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
+#func _ready():
+	#pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+#func _process(delta):
+	#pass
 
 
 func game_over():

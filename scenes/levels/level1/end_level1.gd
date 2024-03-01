@@ -16,7 +16,3 @@ func on_start_pressed() -> void:
 	# this works
 	else:
 		get_tree().change_scene_to_packed(welcome_screen)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
