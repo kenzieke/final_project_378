@@ -5,6 +5,8 @@ signal hit
 var screen_size # Size of the game window.
 @onready var sprite_2d = $Sprite2D
 @onready var collision_shape_2d = $CollisionShape2D
+var bullet_speed = 1000
+var bullet = preload("res://scenes/levels/level3/moving_objects/pie_bullets.tscn")
 
 
 func _ready():
@@ -28,15 +30,24 @@ func _process(delta):
 			
 	look_at(get_global_mouse_position())
 
+	if Input.is_action_just_pressed("LMB"):
+		fire()
 
+func fire():
+	var bullet_instance = bullet.instantiate()
+	bullet_instance.position = get_global_position()
+	bullet_instance.rotation_degrees = rotation_degrees
+	#bullet_instance.apply_impulse(Vector2(), Vector2(bullet_speed, 0).rotated(rotation))
+	bullet_instance.linear_velocity = Vector2(bullet_speed,0).rotated(rotation)
+	get_tree().get_root().call_deferred("add_child", bullet_instance)
 
-func _on_body_entered(body):
-	hide() # Player disappears after being hit.
-	hit.emit()
-	# Must be deferred as we can't change physics properties on a physics callback.
-	collision_shape_2d.set_deferred("disabled", true)
+#func _on_body_entered(body):
+	#hide() # Player disappears after being hit.
+	#hit.emit()
+	## Must be deferred as we can't change physics properties on a physics callback.
+	#collision_shape_2d.set_deferred("disabled", true)
 	
-func start(pos):
-	position = pos
-	show()
-	$CollisionShape2D.disabled = false
+#func start(pos):
+	#position = pos
+	#show()
+	#$CollisionShape2D.disabled = false
