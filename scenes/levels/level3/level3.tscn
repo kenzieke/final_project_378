@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://o8ypvcxkatns"]
+
+[ext_resource type="Texture2D" uid="uid://cx3next00nx4f" path="res://scenes/levels/level3/images_level3/ice.png" id="1_40v2c"]
+
+[node name="Level3" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1184.0
+offset_bottom = 1184.0
+texture = ExtResource("1_40v2c")
+stretch_mode = 1

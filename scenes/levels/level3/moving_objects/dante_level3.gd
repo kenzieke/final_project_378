@@ -3,13 +3,12 @@ extends Area2D
 signal hit
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
-@onready var animatable_body_2d = $AnimatableBody2D
+@onready var sprite_2d = $Sprite2D
 @onready var collision_shape_2d = $CollisionShape2D
 
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	hide()
 	
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
@@ -22,26 +21,12 @@ func _process(delta):
 	if Input.is_action_pressed("up"):
 		velocity.y -= 1
 
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
-		animatable_body_2d.play()
-	else:
-		animatable_body_2d.stop()
+	velocity = velocity.normalized() * speed
 		
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
-	
-	if velocity.x != 0:
-		animatable_body_2d.animation = "walking" # need to add walking up and down and side to side
-		animatable_body_2d.flip_v = false
-		if velocity.x < 0:
-			animatable_body_2d.flip_h = true
-		else:
-			animatable_body_2d.flip_h = false
-	elif velocity.y != 0:
-		animatable_body_2d.animation = "walking_up"
-		if velocity.y > 0:
-			animatable_body_2d.animation = "walking_down"
+			
+	look_at(get_global_mouse_position())
 
 
 

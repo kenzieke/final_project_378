@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgjf7gb52da0u"]
+
+[ext_resource type="Script" path="res://scenes/levels/level3/moving_objects/dante_level3.gd" id="1_v5wmj"]
+[ext_resource type="Texture2D" uid="uid://c6dlliw5dwfux" path="res://scenes/levels/level3/images_level3/car_top_down.png" id="2_w108j"]
+[ext_resource type="AudioStream" uid="uid://cyr8h21r7pjnu" path="res://audio/squeaky-toy-1-6059.mp3" id="10_4dgwi"]
+[ext_resource type="AudioStream" uid="uid://dxorvkxsmku5b" path="res://audio/funny-spring-jump-140378.mp3" id="11_qbdah"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hv60r"]
+size = Vector2(45, 76.75)
+
+[node name="DanteLevel3" type="Area2D"]
+script = ExtResource("1_v5wmj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(89, 77)
+scale = Vector2(3.1875, 3.1875)
+texture = ExtResource("2_w108j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(28, 38.375)
+shape = SubResource("RectangleShape2D_hv60r")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_4dgwi")
+volume_db = -20.0
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_qbdah")
+volume_db = -15.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

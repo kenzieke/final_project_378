@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmt72ontsc0l3"]
+
+[ext_resource type="Texture2D" uid="uid://drps0aqftnfpy" path="res://scenes/levels/level3/images_level3/pie.png" id="1_kyv4r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rutlx"]
+radius = 15.1327
+
+[node name="PieBullets" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18, 20)
+shape = SubResource("CircleShape2D_rutlx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(18.5, 18.5)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("1_kyv4r")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
