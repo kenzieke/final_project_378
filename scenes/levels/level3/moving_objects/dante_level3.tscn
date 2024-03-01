@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bgjf7gb52da0u"]
+[gd_scene load_steps=8 format=3 uid="uid://bgjf7gb52da0u"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/moving_objects/dante_level3.gd" id="1_v5wmj"]
 [ext_resource type="Texture2D" uid="uid://c6dlliw5dwfux" path="res://scenes/levels/level3/images_level3/car_top_down.png" id="2_w108j"]
+[ext_resource type="Texture2D" uid="uid://mhw02bt8157e" path="res://scenes/levels/level3/images_level3/light.png" id="5_mlfw0"]
 [ext_resource type="AudioStream" uid="uid://cyr8h21r7pjnu" path="res://audio/squeaky-toy-1-6059.mp3" id="10_4dgwi"]
 [ext_resource type="AudioStream" uid="uid://dxorvkxsmku5b" path="res://audio/funny-spring-jump-140378.mp3" id="11_qbdah"]
 
@@ -38,6 +39,23 @@ volume_db = -15.0
 position = Vector2(28, 39)
 scale = Vector2(1.93227, 4.3814)
 shape = SubResource("RectangleShape2D_4ao4t")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.6, 0.6)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(17, 10)
+color = Color(1, 1, 0, 1)
+shadow_enabled = true
+texture = ExtResource("5_mlfw0")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(39, 10)
+color = Color(1, 1, 0, 1)
+shadow_enabled = true
+texture = ExtResource("5_mlfw0")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
