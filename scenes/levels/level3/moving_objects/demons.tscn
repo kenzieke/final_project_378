@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cbbpvxo35xmou"]
+[gd_scene load_steps=12 format=3 uid="uid://cbbpvxo35xmou"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/moving_objects/demons.gd" id="1_gql7v"]
 [ext_resource type="Texture2D" uid="uid://c8ojag2ugfa0q" path="res://scenes/levels/level3/images_level3/BatAttack.png" id="2_e2042"]
@@ -63,10 +63,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uos2k"]
 size = Vector2(24, 17)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_84fbk"]
-size = Vector2(32, 23)
-
-[node name="Demons" type="CharacterBody2D"]
+[node name="Demons" type="Area2D"]
+position = Vector2(-38, -27)
 scale = Vector2(2.35327, 2.35327)
 script = ExtResource("1_gql7v")
 
@@ -82,10 +80,4 @@ autoplay = "fly"
 position = Vector2(16, 11.5)
 shape = SubResource("RectangleShape2D_uos2k")
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(16, 11.5)
-shape = SubResource("RectangleShape2D_84fbk")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
