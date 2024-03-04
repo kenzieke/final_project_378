@@ -26,7 +26,8 @@ func _process(delta):
 	velocity = velocity.normalized() * speed
 		
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
+	position.x = clamp(position.x, $Camera2D.limit_left, $Camera2D.limit_right)
+	position.y = clamp(position.y, $Camera2D.limit_top, $Camera2D.limit_bottom)
 			
 	look_at(get_global_mouse_position())
 

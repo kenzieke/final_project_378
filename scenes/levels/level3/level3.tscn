@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://o8ypvcxkatns"]
+[gd_scene load_steps=13 format=3 uid="uid://o8ypvcxkatns"]
 
 [ext_resource type="Texture2D" uid="uid://cx3next00nx4f" path="res://scenes/levels/level3/images_level3/ice.png" id="1_40v2c"]
+[ext_resource type="Script" path="res://scenes/levels/level3/level3.gd" id="1_nf5t4"]
 [ext_resource type="PackedScene" uid="uid://bgjf7gb52da0u" path="res://scenes/levels/level3/moving_objects/dante_level3.tscn" id="2_uo43x"]
 [ext_resource type="PackedScene" uid="uid://dmt72ontsc0l3" path="res://scenes/levels/level3/moving_objects/pie_bullets.tscn" id="3_x7akh"]
 [ext_resource type="PackedScene" uid="uid://cbbpvxo35xmou" path="res://scenes/levels/level3/moving_objects/demons.tscn" id="4_a1600"]
@@ -283,6 +284,7 @@ sources/1 = SubResource("TileSetAtlasSource_02bj1")
 sources/2 = SubResource("TileSetAtlasSource_cyxxu")
 
 [node name="Level3" type="Node2D"]
+script = ExtResource("1_nf5t4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -294,7 +296,7 @@ texture = ExtResource("1_40v2c")
 stretch_mode = 1
 
 [node name="DanteLevel3" parent="." instance=ExtResource("2_uo43x")]
-position = Vector2(686, 913)
+position = Vector2(418, 553)
 
 [node name="PieBullets" parent="." instance=ExtResource("3_x7akh")]
 visible = false
