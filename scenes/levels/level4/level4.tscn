@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci1oflhreenmu"]
+
+[ext_resource type="Script" path="res://scenes/levels/level4/Target.gd" id="1_waorg"]
+[ext_resource type="Script" path="res://scenes/levels/level4/BadTarget.gd" id="2_hf37j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pcn4f"]
+size = Vector2(40, 40)
+
+[node name="Level" type="Node2D"]
+
+[node name="Target" type="Area2D" parent="."]
+priority = 1
+script = ExtResource("1_waorg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Target"]
+z_index = 1
+position = Vector2(578, 327)
+shape = SubResource("RectangleShape2D_pcn4f")
+
+[node name="ColorRect" type="ColorRect" parent="Target"]
+z_index = -1
+offset_left = 558.0
+offset_top = 307.0
+offset_right = 598.0
+offset_bottom = 347.0
+mouse_filter = 1
+color = Color(0.94902, 0, 0.192157, 1)
+
+[node name="BadTarget" type="Area2D" parent="."]
+priority = 1
+script = ExtResource("2_hf37j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BadTarget"]
+z_index = 1
+position = Vector2(578, 327)
+shape = SubResource("RectangleShape2D_pcn4f")
+
+[node name="ColorRect" type="ColorRect" parent="BadTarget"]
+z_index = -1
+offset_left = 558.0
+offset_top = 307.0
+offset_right = 598.0
+offset_bottom = 347.0
+mouse_filter = 1
+color = Color(0, 0.568627, 0.247059, 1)
+
+[connection signal="mouse_entered" from="Target" to="Target" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Target" to="Target" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="BadTarget" to="BadTarget" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="BadTarget" to="BadTarget" method="_on_mouse_exited"]
