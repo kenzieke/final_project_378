@@ -10,8 +10,8 @@ var score
 @onready var knife_spawn_location = $KnifePath/KnifeSpawnLocation
 @onready var hud = $Hud
 @onready var knife_sounds = $KnifeSounds
-# CHANGE THIS TO SCENE AFTER YOU WIN
-const FEAR_SCENE = preload("res://scenes/levels/level2/dialogue_scenes/fear_scene.tscn")
+const promise_end = preload("res://scenes/levels/level2/dialogue_scenes/promise_end.tscn")
+const friend_end = preload("res://scenes/levels/level2/dialogue_scenes/friend_end.tscn")
 
 # Called when the node enters the scene tree for the first time.
 #func _ready():
@@ -65,7 +65,10 @@ func _on_score_timer_timeout():
 	score += 1
 	hud.update_score(score)
 	if score == 60:
-		get_tree().change_scene_to_packed(FEAR_SCENE)
+		if global.promise_wrath == 1:
+			get_tree().change_scene_to_packed(promise_end)
+		elif global.friend_wrath == 1:
+			get_tree().change_scene_to_packed(friend_end)
 
 func _on_start_timer_timeout():
 	knife_timer.start()

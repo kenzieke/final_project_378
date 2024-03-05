@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://8qf1jdtmjjb2"]
+[gd_scene load_steps=4 format=3 uid="uid://8qf1jdtmjjb2"]
+
+[ext_resource type="Script" path="res://scenes/levels/level2/dialogue_scenes/promise_wrath2.gd" id="1_e518b"]
 
 [sub_resource type="SystemFont" id="SystemFont_marp4"]
 font_names = PackedStringArray("Liberation Serif")
@@ -13,6 +15,7 @@ offset_left = 500.0
 offset_top = 320.0
 offset_right = 500.0
 offset_bottom = 320.0
+script = ExtResource("1_e518b")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1

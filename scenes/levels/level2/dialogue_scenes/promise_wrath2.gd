@@ -1,15 +1,14 @@
-class_name PromiseWrath
+class_name PromiseWrath2
 extends Control
 
 @onready var next_button = $MarginContainer/HBoxContainer/VBoxContainer/Next_Button as Button
-@export var promise_wrath2 = preload("res://scenes/levels/level2/dialogue_scenes/promise_wrath2.tscn") as PackedScene
+@export var level2 = preload("res://scenes/levels/level2/level2.tscn") as PackedScene
 
 func _ready():
-	global.promise_wrath += 1
 	next_button.button_down.connect(on_next_pressed)
 
 func on_next_pressed() -> void:
-	get_tree().change_scene_to_packed(promise_wrath2)
+	get_tree().change_scene_to_packed(level2)
 
 func _process(_delta):
 	pass
