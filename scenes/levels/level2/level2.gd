@@ -60,16 +60,20 @@ func _on_knife_timer_timeout():
 
 	# Spawn the mob by adding it to the Main scene.
 	add_child(knife)
+	
+func pick_end_scene():
+	if global.promise_wrath == 1:
+			get_tree().change_scene_to_packed(promise_end)
+	else: # wasn't working with elif statement, might be problem later
+		get_tree().change_scene_to_packed(friend_end)
 
 func _on_score_timer_timeout():
 	score += 1
 	hud.update_score(score)
 	if score == 60:
-		if global.promise_wrath == 1:
-			get_tree().change_scene_to_packed(promise_end)
-		elif global.friend_wrath == 1:
-			get_tree().change_scene_to_packed(friend_end)
+		pick_end_scene()
 
 func _on_start_timer_timeout():
 	knife_timer.start()
 	score_timer.start()
+
