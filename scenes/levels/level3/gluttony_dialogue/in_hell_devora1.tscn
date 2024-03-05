@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dv6h5ydh4nytf"]
+[gd_scene load_steps=3 format=3 uid="uid://ccgub62yta0ub"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -6,7 +6,7 @@ font_names = PackedStringArray("Liberation Serif")
 [sub_resource type="SystemFont" id="SystemFont_g831j"]
 font_names = PackedStringArray("Liberation Serif")
 
-[node name="Dialogue1_3" type="Control"]
+[node name="KnowMephDevora" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 500.0
@@ -52,7 +52,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Well, well, well, what do we have here? Are you the morsel that Acheron promised to deliver to me? You seem rather puny, but I suppose you'll suffice until dinner."
+text = "Mephistopheles came to me when I was just a young lass. He made me a promise: if I worked for him, my siblings would never know hunger again. Giving up my soul for their well-being was the easiest choice I ever made. And true to his word, he always delivers my favorite meals; which is why I thought you were my next one."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -120,19 +120,9 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Learn_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="Start_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_g831j")
 theme_override_font_sizes/font_size = 24
-text = "I'M HERE TO LEARN FROM YOU."
-
-[node name="Seperator20" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="Defeat_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(120, 32)
-layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_g831j")
-theme_override_font_sizes/font_size = 24
-text = "I'M HERE TO DEFEAT YOU."
+text = "..."
