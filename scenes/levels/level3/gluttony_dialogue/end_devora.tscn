@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccgub62yta0ub"]
+[gd_scene load_steps=3 format=3 uid="uid://brpobkj2ujvnx"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -6,7 +6,7 @@ font_names = PackedStringArray("Liberation Serif")
 [sub_resource type="SystemFont" id="SystemFont_g831j"]
 font_names = PackedStringArray("Liberation Serif")
 
-[node name="InHellDevora1" type="Control"]
+[node name="EndDevora" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 500.0
@@ -52,7 +52,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Down here in Hell, I'm paying for the lack of respect I got back on Earth. When I was alive, I was so poor I couldn't even afford a meal. I'd sneak food for my siblings, but I went hungry myself. Then I started stealing bodies from graves, selling them to doctors who wanted to experiment. Sometimes the bodies weren't any good, and those doctors would kick me out with nothing."
+text = "I'll consider our conversation. If you're serious about your ambitions, it's time for you to head to Lazaro. Just be prepared to deal with his... intermittent attention span."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -125,4 +125,4 @@ custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_g831j")
 theme_override_font_sizes/font_size = 24
-text = "SO STEALING?"
+text = "Next"

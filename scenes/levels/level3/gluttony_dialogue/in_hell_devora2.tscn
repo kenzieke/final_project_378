@@ -3,10 +3,10 @@
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
 
-[sub_resource type="SystemFont" id="SystemFont_g831j"]
+[sub_resource type="SystemFont" id="SystemFont_gse10"]
 font_names = PackedStringArray("Liberation Serif")
 
-[node name="InHellDevora1" type="Control"]
+[node name="InHellDevora2" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 500.0
@@ -52,7 +52,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Down here in Hell, I'm paying for the lack of respect I got back on Earth. When I was alive, I was so poor I couldn't even afford a meal. I'd sneak food for my siblings, but I went hungry myself. Then I started stealing bodies from graves, selling them to doctors who wanted to experiment. Sometimes the bodies weren't any good, and those doctors would kick me out with nothing."
+text = "Is it truly such a heinous act to take from the affluent and provide for the destitute? I reckon it ain't all that dreadful. But look where I ended up. Likely has to do with what I did with the bodies those doctors rejected. Cut 'em into pieces and savored a meal all to myself. Strangely, it only made me hungrier, and I developed quite a fondness for the taste of human flesh."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -120,9 +120,19 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Start_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="Question1_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_g831j")
+theme_override_fonts/font = SubResource("SystemFont_gse10")
 theme_override_font_sizes/font_size = 24
-text = "SO STEALING?"
+text = "DO YOU LIKE THE CIRCUS?"
+
+[node name="Seperator20" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Question2_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_gse10")
+theme_override_font_sizes/font_size = 24
+text = "WOULD YOU LEAVE THE CIRCUS?"
