@@ -1,4 +1,4 @@
-class_name Promise2Devora
+class_name Friend2Devora
 extends Control
 
 @onready var next_button = $MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/Start_Button as Button
