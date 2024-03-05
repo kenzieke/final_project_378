@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7ctf0cbstc37"]
+[gd_scene load_steps=4 format=3 uid="uid://dioxqkxsstnf0"]
 
-[ext_resource type="Script" path="res://scenes/levels/level2/dialogue_scenes/fear_scene.gd" id="1_q21yw"]
+[ext_resource type="Script" path="res://scenes/levels/level2/dialogue_scenes/leave_circus.gd" id="1_sw8ai"]
 
 [sub_resource type="SystemFont" id="SystemFont_kehwk"]
 font_names = PackedStringArray("Liberation Serif")
 
-[sub_resource type="SystemFont" id="SystemFont_y31wu"]
+[sub_resource type="SystemFont" id="SystemFont_owlp3"]
 font_names = PackedStringArray("Liberation Serif")
 
-[node name="FearScene" type="Control"]
+[node name="LeaveCircus" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_q21yw")
+script = ExtResource("1_sw8ai")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -48,7 +48,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_kehwk")
 theme_override_font_sizes/font_size = 32
-text = "Fear is but a natural instinct, Dante, yet 'tis thy response to it that delineates thy character. Bear in mind: anger is a formidable catalyst, capable of propelling thee towards eminence or precipitating thy downfall. Let us harness thy trepidation and fashion it into a force of formidable reckoning, pray thee?"
+text = "I could only depart if Mephistopheles were to release my soul or if someone were to become the owner of his, but neither scenario appears likely."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -114,9 +114,22 @@ layout_mode = 2
 [node name="Seperator19" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Next_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Promise_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_y31wu")
+theme_override_fonts/font = SubResource("SystemFont_owlp3")
 theme_override_font_sizes/font_size = 24
-text = "..."
+text = "LET'S MAKE A PROMISE"
+
+[node name="Seperator20" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Friend_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_owlp3")
+theme_override_font_sizes/font_size = 24
+text = "LET'S BE FRIENDS"

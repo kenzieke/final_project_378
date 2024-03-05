@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="TheDivineCircus"
-run/main_scene="res://scenes/levels/level3/level3.tscn"
+run/main_scene="res://scenes/levels/level2/dialogue_scenes/dialogue1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 

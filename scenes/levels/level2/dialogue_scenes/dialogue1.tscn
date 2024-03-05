@@ -55,7 +55,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "So, Dante, I sense a flicker of ambition in your eyes. You seek to ascend the ranks of the circus, do you? Well, know this: the path to greatness is fraught with peril, and only the strong survive. Are you prepared to embrace the fury within you, to wield it as a weapon against the challenges that lie ahead?"
+text = "Ah, Mephistopheles's handiwork, I presume? Thou art set upon ascending the echelons of the circus, art thou not? Understand this: the journey to eminence is fraught with danger, and only the stout of heart endure. Dost thou possess the fortitude to harness the fury within thee, to wield it as a cudgel against the trials that await?"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -129,6 +129,9 @@ layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_g831j")
 theme_override_font_sizes/font_size = 24
 text = "I FEAR NO DANGER, ACHERON. "
+
+[node name="Seperator20" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
 
 [node name="Fear_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(120, 32)

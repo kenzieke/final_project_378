@@ -1,17 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7ctf0cbstc37"]
+[gd_scene load_steps=4 format=3 uid="uid://vlcuywxf7h3r"]
 
-[ext_resource type="Script" path="res://scenes/levels/level2/dialogue_scenes/fear_scene.gd" id="1_q21yw"]
+[ext_resource type="Script" path="res://scenes/levels/level2/dialogue_scenes/friend_wrath2.gd" id="1_5m578"]
 
-[sub_resource type="SystemFont" id="SystemFont_kehwk"]
+[sub_resource type="SystemFont" id="SystemFont_marp4"]
 font_names = PackedStringArray("Liberation Serif")
 
-[sub_resource type="SystemFont" id="SystemFont_y31wu"]
+[sub_resource type="SystemFont" id="SystemFont_dvwkx"]
 font_names = PackedStringArray("Liberation Serif")
 
-[node name="FearScene" type="Control"]
+[node name="FriendWrath2" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_q21yw")
+offset_left = 500.0
+offset_top = 320.0
+offset_right = 500.0
+offset_bottom = 320.0
+script = ExtResource("1_5m578")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -26,8 +30,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 996.0
-offset_bottom = 640.0
+offset_left = -496.0
+offset_top = -320.0
+offset_right = 500.0
+offset_bottom = 320.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 12
@@ -46,16 +52,15 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = SubResource("SystemFont_kehwk")
+theme_override_fonts/font = SubResource("SystemFont_marp4")
 theme_override_font_sizes/font_size = 32
-text = "Fear is but a natural instinct, Dante, yet 'tis thy response to it that delineates thy character. Bear in mind: anger is a formidable catalyst, capable of propelling thee towards eminence or precipitating thy downfall. Let us harness thy trepidation and fashion it into a force of formidable reckoning, pray thee?"
+text = "That is a friendship I shall consider, yet only if thou art able to withstand the trials I set forth. Let us delve into the depths of thy character, shall we? For I am not wont to forge alliances lightly."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
@@ -117,6 +122,6 @@ layout_mode = 2
 [node name="Next_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_y31wu")
+theme_override_fonts/font = SubResource("SystemFont_dvwkx")
 theme_override_font_sizes/font_size = 24
-text = "..."
+text = "START"
