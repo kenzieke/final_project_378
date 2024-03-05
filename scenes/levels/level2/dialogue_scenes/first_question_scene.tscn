@@ -5,7 +5,7 @@
 [sub_resource type="SystemFont" id="SystemFont_marp4"]
 font_names = PackedStringArray("Liberation Serif")
 
-[sub_resource type="SystemFont" id="SystemFont_dvwkx"]
+[sub_resource type="SystemFont" id="SystemFont_hwu3a"]
 font_names = PackedStringArray("Liberation Serif")
 
 [node name="FirstQuestionScene" type="Control"]
@@ -119,9 +119,22 @@ layout_mode = 2
 [node name="Seperator19" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Next_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Question1_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_dvwkx")
+theme_override_fonts/font = SubResource("SystemFont_hwu3a")
 theme_override_font_sizes/font_size = 24
-text = "Next"
+text = "WHY ARE YOU IN HELL?"
+
+[node name="Seperator20" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Question2_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hwu3a")
+theme_override_font_sizes/font_size = 24
+text = "HOW DO YOU KNOW MEPHISTOPHELES?"
