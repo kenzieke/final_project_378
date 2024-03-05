@@ -52,7 +52,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Friend? Seriously? Look around, we're in Hell. No such thing exists down here. Where in the nine circles did you get that idea from?"
+text = "Hah! Kindness? In Hell? You think that'll sway Mephistopheles to hand over his prized circus to you? Let me clue you in: Mephistopheles values carnage and cunning, not niceties. That's why we're the top circus here. If you're using friendship to get to him, you're in for a rude awakening."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -125,5 +125,4 @@ custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_g831j")
 theme_override_font_sizes/font_size = 24
-text = "I’m trying to make the circus better and become Mephistophele’s successor.
-I can help you find something else to satisfy your cravings and truly end your hunger."
+text = "..."
