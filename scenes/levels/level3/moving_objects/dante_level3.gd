@@ -30,15 +30,16 @@ func _process(delta):
 	position.y = clamp(position.y, $Camera2D.limit_top, $Camera2D.limit_bottom)
 			
 	look_at(get_global_mouse_position())
-
+	rotation = rotation + 90 
+	
 	if Input.is_action_just_pressed("LMB"):
 		fire()
 
 func fire():
 	var bullet_instance = bullet.instantiate()
 	bullet_instance.position = get_global_position()
-	bullet_instance.rotation_degrees = rotation_degrees
-	bullet_instance.linear_velocity = Vector2(bullet_speed,0).rotated(rotation)
+	bullet_instance.rotation_degrees = rotation_degrees - 90
+	bullet_instance.linear_velocity = Vector2(bullet_speed,0).rotated(rotation - 90)
 	get_tree().get_root().call_deferred("add_child", bullet_instance)
 	
 func restart_level():
