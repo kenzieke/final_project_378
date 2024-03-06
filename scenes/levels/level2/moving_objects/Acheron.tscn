@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://couv3pynb5dwl"]
+
+[ext_resource type="Texture2D" uid="uid://dv7qew6c5vfln" path="res://scenes/levels/level2/images_level2/Knight_Idle.png" id="1_hjiqx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65dfv"]
+atlas = ExtResource("1_hjiqx")
+region = Rect2(0, 0, 29, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vort8"]
+atlas = ExtResource("1_hjiqx")
+region = Rect2(29, 0, 29, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffq7w"]
+atlas = ExtResource("1_hjiqx")
+region = Rect2(58, 0, 29, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4a08w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65dfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vort8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffq7w")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iautu"]
+size = Vector2(39.5, 54.5)
+
+[node name="Acheron" type="CharacterBody2D"]
+
+[node name="AnimatableBody2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(20, 28)
+scale = Vector2(1.3556, 1.3556)
+sprite_frames = SubResource("SpriteFrames_4a08w")
+animation = &"idle"
+autoplay = "idle"
+frame = 1
+frame_progress = 0.836168
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20.25, 27.25)
+shape = SubResource("RectangleShape2D_iautu")
