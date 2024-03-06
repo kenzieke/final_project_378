@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkk3ts23j2bta"]
+[gd_scene load_steps=6 format=3 uid="uid://dkk3ts23j2bta"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/gluttony_dialogue/in_hell_devora2.gd" id="1_v41wf"]
+[ext_resource type="Texture2D" uid="uid://dtx6shv8pbf31" path="res://scenes/levels/level3/images_level3/Gluttony_BG.png" id="2_mmhvn"]
+[ext_resource type="PackedScene" uid="uid://dh16rnyk1mmgw" path="res://scenes/levels/level3/moving_objects/Devora.tscn" id="3_jglgx"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -19,12 +21,21 @@ size_flags_horizontal = 4
 script = ExtResource("1_v41wf")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -572.0
+offset_top = -320.0
+offset_right = 595.0
+offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_mmhvn")
+
+[node name="Devora" parent="." instance=ExtResource("3_jglgx")]
+position = Vector2(-44, -34)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

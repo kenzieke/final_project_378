@@ -32,14 +32,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iautu"]
-size = Vector2(200, 640)
+size = Vector2(112, 360.223)
 
 [node name="Devora" type="CharacterBody2D"]
 
 [node name="AnimatableBody2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(156, 328)
-scale = Vector2(10.7468, 10.7468)
+position = Vector2(54.3606, 184.222)
+scale = Vector2(6.04007, 6.04007)
 sprite_frames = SubResource("SpriteFrames_4a08w")
 animation = &"idle"
 autoplay = "idle"
@@ -47,5 +47,5 @@ frame = 2
 frame_progress = 0.371655
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(156, 320)
+position = Vector2(56, 179.889)
 shape = SubResource("RectangleShape2D_iautu")
