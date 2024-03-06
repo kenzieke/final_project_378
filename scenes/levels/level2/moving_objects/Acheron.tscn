@@ -28,18 +28,18 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iautu"]
-size = Vector2(39.5, 54.5)
+size = Vector2(311.75, 430)
 
 [node name="Acheron" type="CharacterBody2D"]
 
 [node name="AnimatableBody2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(20, 28)
-scale = Vector2(1.3556, 1.3556)
+position = Vector2(156.172, 220.519)
+scale = Vector2(10.7468, 10.7468)
 sprite_frames = SubResource("SpriteFrames_4a08w")
 animation = &"idle"
 autoplay = "idle"
@@ -47,5 +47,5 @@ frame = 1
 frame_progress = 0.836168
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(20.25, 27.25)
+position = Vector2(156.125, 215)
 shape = SubResource("RectangleShape2D_iautu")

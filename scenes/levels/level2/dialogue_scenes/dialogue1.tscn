@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bm1sslplolhf4"]
+[gd_scene load_steps=6 format=3 uid="uid://bm1sslplolhf4"]
 
 [ext_resource type="Script" path="res://scenes/levels/level2/dialogue_scenes/dialogue1.gd" id="1_tnswd"]
 [ext_resource type="Texture2D" uid="uid://dvlemfmp2kwp7" path="res://scenes/levels/level2/images_level2/level2dialoguebackground.png" id="2_2n6mn"]
+[ext_resource type="PackedScene" uid="uid://couv3pynb5dwl" path="res://scenes/levels/level2/moving_objects/Acheron.tscn" id="3_fbwgr"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -31,6 +32,9 @@ offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_2n6mn")
+
+[node name="Acheron" parent="." instance=ExtResource("3_fbwgr")]
+position = Vector2(-155, -99)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

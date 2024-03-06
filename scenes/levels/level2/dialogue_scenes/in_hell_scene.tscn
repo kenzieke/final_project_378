@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwb1arcpw27ye"]
+[gd_scene load_steps=6 format=3 uid="uid://cwb1arcpw27ye"]
 
 [ext_resource type="Script" path="res://scenes/levels/level2/dialogue_scenes/in_hell_scene.gd" id="1_be8ys"]
 [ext_resource type="Texture2D" uid="uid://dvlemfmp2kwp7" path="res://scenes/levels/level2/images_level2/level2dialoguebackground.png" id="2_calba"]
+[ext_resource type="PackedScene" uid="uid://couv3pynb5dwl" path="res://scenes/levels/level2/moving_objects/Acheron.tscn" id="3_lyrlf"]
 
 [sub_resource type="SystemFont" id="SystemFont_kehwk"]
 font_names = PackedStringArray("Liberation Serif")
@@ -24,6 +25,9 @@ offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_calba")
+
+[node name="Acheron" parent="." instance=ExtResource("3_lyrlf")]
+position = Vector2(350, 218)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
