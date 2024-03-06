@@ -7,3 +7,4 @@ var promise_wrath = 0
 var friend_wrath = 0
 var promise_devora = 0
 var friend_devora = 0
+var level3_bats = 5

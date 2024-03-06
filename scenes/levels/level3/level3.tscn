@@ -296,7 +296,7 @@ texture = ExtResource("1_40v2c")
 stretch_mode = 1
 
 [node name="DanteLevel3" parent="." instance=ExtResource("2_uo43x")]
-position = Vector2(418, 553)
+position = Vector2(821, 788)
 
 [node name="PieBullets" parent="." instance=ExtResource("3_x7akh")]
 visible = false

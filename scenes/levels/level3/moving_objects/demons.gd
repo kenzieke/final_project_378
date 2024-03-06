@@ -13,4 +13,5 @@ func _physics_process(delta):
 
 func _on_area_entered(area):
 	if "BulletArea" in area.name:
-		queue_free()	
+		queue_free()
+		global.level3_bats -= 1
