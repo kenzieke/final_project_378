@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://h3f7pnwunjov"]
+[gd_scene load_steps=5 format=3 uid="uid://h3f7pnwunjov"]
 
 [ext_resource type="Script" path="res://scenes/levels/level2/dialogue_scenes/like_circus.gd" id="1_nw3bv"]
+[ext_resource type="Texture2D" uid="uid://dvlemfmp2kwp7" path="res://scenes/levels/level2/images_level2/level2dialoguebackground.png" id="2_3iqbm"]
 
 [sub_resource type="SystemFont" id="SystemFont_kehwk"]
 font_names = PackedStringArray("Liberation Serif")
@@ -18,8 +19,11 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1000.0
+offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_3iqbm")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

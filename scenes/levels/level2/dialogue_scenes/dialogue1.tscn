@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bm1sslplolhf4"]
+[gd_scene load_steps=5 format=3 uid="uid://bm1sslplolhf4"]
 
 [ext_resource type="Script" path="res://scenes/levels/level2/dialogue_scenes/dialogue1.gd" id="1_tnswd"]
+[ext_resource type="Texture2D" uid="uid://dvlemfmp2kwp7" path="res://scenes/levels/level2/images_level2/level2dialoguebackground.png" id="2_2n6mn"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -23,8 +24,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -320.0
+offset_right = 500.0
+offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_2n6mn")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
