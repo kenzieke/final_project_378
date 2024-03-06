@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://l7ctmx3yulgg"]
+[gd_scene load_steps=7 format=3 uid="uid://l7ctmx3yulgg"]
 
 [ext_resource type="Script" path="res://scenes/levels/level2/dialogue_scenes/know_meph.gd" id="1_fqsci"]
 [ext_resource type="Texture2D" uid="uid://dvlemfmp2kwp7" path="res://scenes/levels/level2/images_level2/level2dialoguebackground.png" id="2_301x2"]
 [ext_resource type="PackedScene" uid="uid://couv3pynb5dwl" path="res://scenes/levels/level2/moving_objects/Acheron.tscn" id="3_edqkc"]
+[ext_resource type="AudioStream" uid="uid://coogkfhgjyyil" path="res://scenes/levels/level2/audio_level2/medieval-fantasy-142837.mp3" id="4_db4te"]
 
 [sub_resource type="SystemFont" id="SystemFont_kehwk"]
 font_names = PackedStringArray("Liberation Serif")
@@ -141,3 +142,7 @@ layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_f0l8l")
 theme_override_font_sizes/font_size = 24
 text = "WOULD YOU LEAVE THE CIRCUS?"
+
+[node name="Level2Background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_db4te")
+autoplay = true

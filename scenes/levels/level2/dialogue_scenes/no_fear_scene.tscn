@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://befsysya48q3j"]
+[gd_scene load_steps=7 format=3 uid="uid://befsysya48q3j"]
 
 [ext_resource type="Script" path="res://scenes/levels/level2/dialogue_scenes/no_fear_scene.gd" id="1_cxoyy"]
 [ext_resource type="Texture2D" uid="uid://dvlemfmp2kwp7" path="res://scenes/levels/level2/images_level2/level2dialoguebackground.png" id="2_00t8a"]
 [ext_resource type="PackedScene" uid="uid://couv3pynb5dwl" path="res://scenes/levels/level2/moving_objects/Acheron.tscn" id="3_trh5y"]
+[ext_resource type="AudioStream" uid="uid://coogkfhgjyyil" path="res://scenes/levels/level2/audio_level2/medieval-fantasy-142837.mp3" id="4_q46nl"]
 
 [sub_resource type="SystemFont" id="SystemFont_marp4"]
 font_names = PackedStringArray("Liberation Serif")
@@ -135,3 +136,7 @@ layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_dvwkx")
 theme_override_font_sizes/font_size = 24
 text = "..."
+
+[node name="Level2Background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_q46nl")
+autoplay = true
