@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://brpobkj2ujvnx"]
+[gd_scene load_steps=6 format=3 uid="uid://brpobkj2ujvnx"]
 
 [ext_resource type="Texture2D" uid="uid://dtx6shv8pbf31" path="res://scenes/levels/level3/images_level3/Gluttony_BG.png" id="1_2v3ov"]
 [ext_resource type="PackedScene" uid="uid://dh16rnyk1mmgw" path="res://scenes/levels/level3/moving_objects/Devora.tscn" id="2_81m4p"]
+[ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="3_q3gje"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -138,3 +139,7 @@ layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_g831j")
 theme_override_font_sizes/font_size = 24
 text = "Next"
+
+[node name="Level3Background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_q3gje")
+autoplay = true

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxky248q0kxi1"]
+[gd_scene load_steps=7 format=3 uid="uid://dxky248q0kxi1"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/gluttony_dialogue/friend1_devora.gd" id="1_hotoh"]
 [ext_resource type="Texture2D" uid="uid://dtx6shv8pbf31" path="res://scenes/levels/level3/images_level3/Gluttony_BG.png" id="2_khada"]
 [ext_resource type="PackedScene" uid="uid://dh16rnyk1mmgw" path="res://scenes/levels/level3/moving_objects/Devora.tscn" id="3_282b7"]
+[ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="4_d65vc"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -141,3 +142,7 @@ theme_override_fonts/font = SubResource("SystemFont_g831j")
 theme_override_font_sizes/font_size = 24
 text = "I’m trying to make the circus better and become Mephistophele’s successor.
 I can help you find something else to satisfy your cravings and truly end your hunger."
+
+[node name="Level3Background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_d65vc")
+autoplay = true

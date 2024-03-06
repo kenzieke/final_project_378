@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var devora_after_scene = preload("res://scenes/levels/level3/gluttony_dialogue/devora_post_game.tscn") as PackedScene
 
 func _ready():
 	var map_limits = $TileMap.get_used_rect()
@@ -12,4 +13,4 @@ func _ready():
 func _process(delta):
 	if global.level3_bats <= 0:
 		print("GAME OVER!!!!")
-		# TODO: proceed to next level
+		get_tree().change_scene_to_packed(devora_after_scene)

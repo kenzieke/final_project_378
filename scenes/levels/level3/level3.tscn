@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://o8ypvcxkatns"]
+[gd_scene load_steps=14 format=3 uid="uid://o8ypvcxkatns"]
 
 [ext_resource type="Texture2D" uid="uid://cx3next00nx4f" path="res://scenes/levels/level3/images_level3/ice.png" id="1_40v2c"]
 [ext_resource type="Script" path="res://scenes/levels/level3/level3.gd" id="1_nf5t4"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bbffbb030v2ga" path="res://scenes/levels/level3/images_level3/pile_of_bones.png" id="5_wra3c"]
 [ext_resource type="Texture2D" uid="uid://bneut0ppjcqnh" path="res://scenes/levels/level3/images_level3/snow.png" id="6_1ahl6"]
 [ext_resource type="Texture2D" uid="uid://ccwh8rwhr0mvj" path="res://scenes/levels/level3/images_level3/blood_snow.png" id="7_1w0yn"]
+[ext_resource type="AudioStream" uid="uid://cwnn60us4o5ma" path="res://scenes/levels/level3/audio_level3/creepy-devil-dance-166764.mp3" id="9_ilei8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c43nu"]
 texture = ExtResource("5_wra3c")
@@ -1103,3 +1104,7 @@ position = Vector2(543, 156)
 
 [node name="Demons8" parent="." instance=ExtResource("4_a1600")]
 position = Vector2(-6.00003, -525)
+
+[node name="Level3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_ilei8")
+autoplay = true
