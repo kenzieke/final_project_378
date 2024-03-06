@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bgjf7gb52da0u"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/moving_objects/dante_level3.gd" id="1_v5wmj"]
-[ext_resource type="Texture2D" uid="uid://c6dlliw5dwfux" path="res://scenes/levels/level3/images_level3/car_top_down.png" id="2_w108j"]
+[ext_resource type="Texture2D" uid="uid://drikya5tuacmr" path="res://scenes/levels/level3/images_level3/centered_car_dante.png" id="2_8a2lf"]
 [ext_resource type="Texture2D" uid="uid://mhw02bt8157e" path="res://scenes/levels/level3/images_level3/light.png" id="5_mlfw0"]
 [ext_resource type="AudioStream" uid="uid://cyr8h21r7pjnu" path="res://audio/squeaky-toy-1-6059.mp3" id="10_4dgwi"]
 [ext_resource type="AudioStream" uid="uid://dxorvkxsmku5b" path="res://audio/funny-spring-jump-140378.mp3" id="11_qbdah"]
@@ -17,9 +17,9 @@ script = ExtResource("1_v5wmj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(60, 38)
+position = Vector2(3.8147e-06, 0)
 scale = Vector2(3.1875, 3.1875)
-texture = ExtResource("2_w108j")
+texture = ExtResource("2_8a2lf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hv60r")
