@@ -41,10 +41,10 @@ func fire():
 	bullet_instance.linear_velocity = Vector2(bullet_speed,0).rotated(rotation)
 	get_tree().get_root().call_deferred("add_child", bullet_instance)
 	
-func kill():
+func restart_level():
 	get_tree().reload_current_scene()
 
-
-func _on_area_2d_body_entered(body):
-	if "Demons" in body.name:
-		kill()
+func _on_area_entered(area):
+	print("area collide: ", area.name)
+	if "Demons" in area.name:
+		restart_level()

@@ -12,6 +12,5 @@ func _physics_process(delta):
 	look_at(DanteLevel3.position)
 
 func _on_area_entered(area):
-	print(area)
 	if "BulletArea" in area.name:
 		queue_free()	
