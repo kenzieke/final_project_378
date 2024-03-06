@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxq6hxqhls7dl"
-path="res://.godot/imported/Gluttony_BG_preview.png-447410fcd4e8cc56d6851896238a61fe.ctex"
+uid="uid://dtx6shv8pbf31"
+path="res://.godot/imported/Gluttony_BG.png-604242ba5814c64690843fc51c88bcfe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/level3/images_level3/Gluttony_BG_preview.png"
-dest_files=["res://.godot/imported/Gluttony_BG_preview.png-447410fcd4e8cc56d6851896238a61fe.ctex"]
+source_file="res://scenes/levels/level3/images_level3/Gluttony_BG.png"
+dest_files=["res://.godot/imported/Gluttony_BG.png-604242ba5814c64690843fc51c88bcfe.ctex"]
 
 [params]
 

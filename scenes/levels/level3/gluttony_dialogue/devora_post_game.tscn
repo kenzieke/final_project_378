@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcv5mbk73i7kf"]
+[gd_scene load_steps=5 format=3 uid="uid://dcv5mbk73i7kf"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/gluttony_dialogue/devora_post_game.gd" id="1_dxau6"]
+[ext_resource type="Texture2D" uid="uid://dtx6shv8pbf31" path="res://scenes/levels/level3/images_level3/Gluttony_BG.png" id="2_gg8i2"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -19,12 +20,18 @@ size_flags_horizontal = 4
 script = ExtResource("1_dxau6")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -320.056
+offset_right = 667.0
+offset_bottom = 327.944
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_gg8i2")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

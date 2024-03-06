@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://dh16rnyk1mmgw"]
+
+[ext_resource type="Texture2D" uid="uid://dxat0x014j381" path="res://scenes/levels/level3/images_level3/Gluttony_Idle.png" id="1_k2tkm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j28pa"]
+atlas = ExtResource("1_k2tkm")
+region = Rect2(0, 0, 18, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esg50"]
+atlas = ExtResource("1_k2tkm")
+region = Rect2(18, 0, 18, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt36f"]
+atlas = ExtResource("1_k2tkm")
+region = Rect2(36, 0, 18, 61)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4a08w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j28pa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esg50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt36f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iautu"]
+size = Vector2(200, 640)
+
+[node name="Devora" type="CharacterBody2D"]
+
+[node name="AnimatableBody2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(156, 328)
+scale = Vector2(10.7468, 10.7468)
+sprite_frames = SubResource("SpriteFrames_4a08w")
+animation = &"idle"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.371655
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(156, 320)
+shape = SubResource("RectangleShape2D_iautu")
