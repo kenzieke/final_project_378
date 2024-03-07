@@ -3,6 +3,9 @@
 [ext_resource type="Script" path="res://scenes/levels/level3/moving_objects/demons.gd" id="1_gql7v"]
 [ext_resource type="Texture2D" uid="uid://c8ojag2ugfa0q" path="res://scenes/levels/level3/images_level3/BatAttack.png" id="2_e2042"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uos2k"]
+size = Vector2(24, 17)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_xa2f2"]
 atlas = ExtResource("2_e2042")
 region = Rect2(0, 0, 32, 32)
@@ -60,13 +63,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uos2k"]
-size = Vector2(24, 17)
-
 [node name="Demons" type="Area2D"]
 position = Vector2(-38, -27)
 scale = Vector2(2.35327, 2.35327)
 script = ExtResource("1_gql7v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 11.5)
+shape = SubResource("RectangleShape2D_uos2k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -76,8 +80,5 @@ sprite_frames = SubResource("SpriteFrames_d35yd")
 animation = &"fly"
 autoplay = "fly"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(16, 11.5)
-shape = SubResource("RectangleShape2D_uos2k")
-
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,4 +1,4 @@
-extends Area2D
+extends Area2D 
 
 const SPEED = 50
 var velocity = Vector2()

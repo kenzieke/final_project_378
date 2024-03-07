@@ -16,6 +16,8 @@ func _on_bullet_area_area_entered(area):
 		queue_free()
 
 
-
 func _on_timer_timeout():
 	queue_free()
+
+func _on_pie_bullets_body_entered(body):
+	pass # Replace with function body.

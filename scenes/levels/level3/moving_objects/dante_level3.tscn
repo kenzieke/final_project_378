@@ -54,3 +54,5 @@ position = Vector2(13, -30)
 color = Color(1, 1, 0, 1)
 shadow_enabled = true
 texture = ExtResource("5_mlfw0")
+
+[connection signal="area_entered" from="DanteCollider" to="." method="_on_dante_collider_area_entered"]

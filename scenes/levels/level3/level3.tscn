@@ -1107,4 +1107,7 @@ position = Vector2(-6.00003, -525)
 
 [node name="Level3" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_ilei8")
+volume_db = -80.0
 autoplay = true
+
+[connection signal="body_entered" from="PieBullets" to="." method="_on_pie_bullets_body_entered"]

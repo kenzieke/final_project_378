@@ -45,7 +45,9 @@ func fire():
 func restart_level():
 	get_tree().reload_current_scene()
 
-func _on_area_entered(area):
+
+func _on_dante_collider_area_entered(area):
 	print("area collide: ", area.name)
 	if "Demons" in area.name:
 		restart_level()
+
