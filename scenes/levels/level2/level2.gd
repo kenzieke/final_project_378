@@ -70,7 +70,7 @@ func pick_end_scene():
 func _on_score_timer_timeout():
 	score += 1
 	hud.update_score(score)
-	if score == 60:
+	if score == 10:
 		pick_end_scene()
 
 func _on_start_timer_timeout():
