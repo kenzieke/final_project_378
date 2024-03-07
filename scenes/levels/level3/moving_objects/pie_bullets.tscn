@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmt72ontsc0l3"]
+[gd_scene load_steps=5 format=3 uid="uid://dmt72ontsc0l3"]
 
+[ext_resource type="Script" path="res://scenes/levels/level3/moving_objects/pie_bullets.gd" id="1_4sspk"]
 [ext_resource type="Texture2D" uid="uid://drps0aqftnfpy" path="res://scenes/levels/level3/images_level3/pie.png" id="1_kyv4r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rutlx"]
@@ -11,6 +12,7 @@ radius = 18.0278
 [node name="PieBullets" type="RigidBody2D"]
 gravity_scale = 0.5
 lock_rotation = true
+script = ExtResource("1_4sspk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(18, 20)
@@ -27,3 +29,10 @@ texture = ExtResource("1_kyv4r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BulletArea"]
 position = Vector2(18, 20)
 shape = SubResource("CircleShape2D_xbw7e")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.8
+autostart = true
+
+[connection signal="area_entered" from="BulletArea" to="." method="_on_bullet_area_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

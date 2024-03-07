@@ -12,7 +12,7 @@ size = Vector2(45, 76.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ao4t"]
 size = Vector2(32.0865, 20.9979)
 
-[node name="DanteLevel3" type="Area2D"]
+[node name="DanteLevel3" type="CharacterBody2D"]
 script = ExtResource("1_v5wmj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -32,9 +32,9 @@ volume_db = -20.0
 stream = ExtResource("11_qbdah")
 volume_db = -15.0
 
-[node name="Test" type="Area2D" parent="."]
+[node name="DanteCollider" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Test"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DanteCollider"]
 scale = Vector2(1.93227, 4.3814)
 shape = SubResource("RectangleShape2D_4ao4t")
 
@@ -54,7 +54,3 @@ position = Vector2(13, -30)
 color = Color(1, 1, 0, 1)
 shadow_enabled = true
 texture = ExtResource("5_mlfw0")
-
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_entered" from="Test" to="." method="_on_area_2d_body_entered"]
