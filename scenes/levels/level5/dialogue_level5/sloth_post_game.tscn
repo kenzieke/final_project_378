@@ -55,13 +55,13 @@ theme_override_constants/separation = 60
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Hoardaxia_Speech" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Speech" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Seems like you've got a good eye. Spotting fakes ain't easy. Alright, spill it. What's on your mind? I'm in the middle of counting coins for the boss."
+text = "*Yawns*... zzz... Oh, what? Um, wait, you tamed it?? I mean, of course you did, it was a simple task. Not how I would've gone about it, but whatever. Why are you still lingering? Oh, right, go on then."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

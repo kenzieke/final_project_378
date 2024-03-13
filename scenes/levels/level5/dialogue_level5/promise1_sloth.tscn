@@ -55,13 +55,13 @@ theme_override_constants/separation = 60
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Hoardaxia_Speech" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Speech" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Oh, so we're talking a deal, huh? I'm not against considering a better offer, but you better be sure you can deliver. I've never really had anyone's trust before, so make sure it's worth betraying the boss's."
+text = "Seems like too much effort. Perhaps I should inform Mephistopheles of your activities? I'm certain he'd find it quite intriguing to learn about the other little serpent in the circus."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -131,8 +131,9 @@ custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_g831j")
 theme_override_font_sizes/font_size = 24
-text = "When I take over the circus, you can be one of the main stars of the show,
-you’ll make way more money that way."
+text = "You’re too lazy to tattle on me to Mephistopheles.
+Join me, and you'll never lift a finger again. Indulge freely, no interruptions.
+With me, you rule, untouched."
 
 [node name="Level3Background" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_o4ugw")

@@ -55,13 +55,13 @@ theme_override_constants/separation = 60
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Hoardaxia_Speech" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Speech" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "I was this big-shot influencer online, you know? Selling out wasn't exactly rocket science. I'd endorse anything, even if it meant wrecking the planet or murdering babies. But who cares, right? Everyone's contributing somehow. I lived for myself, no apologies."
+text = "No idea! I lived life flawlessly: born into wealth and enjoyed my days living off my inheritance! No need for school, work, or even interacting with others. The money was mine, and I saw no fault in indulging solely in myself."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

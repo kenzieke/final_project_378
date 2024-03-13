@@ -55,13 +55,13 @@ theme_override_constants/separation = 60
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Hoardaxia_Speech" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="sSpeech" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "I haven't been down here for long, but I've already helped this circus rake in more cash. Plus, I get my share, so it's not too shabby. I do miss my fans, you know? It's just that now I'm more behind the scenes."
+text = "I don't really like anything. But I don't have to do much work, so I tolerate it."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

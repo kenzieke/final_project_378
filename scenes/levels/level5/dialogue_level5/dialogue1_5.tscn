@@ -55,13 +55,13 @@ theme_override_constants/separation = 60
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Hoardaxia_Speech" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Speech" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Hey, clown kid, what're you doing here? Can't you see I'm busy? Either bring me something shiny or scram before I add your horns to my collection."
+text = "Who are you? What kind of nuisance has Hoardaxia sent my way now? Oh, wait, are you the masseuse that Mephistopheles promised?"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

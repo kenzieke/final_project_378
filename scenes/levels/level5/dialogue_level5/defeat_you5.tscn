@@ -55,13 +55,13 @@ theme_override_constants/separation = 60
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Hoardaxia_Speech" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Speech" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "So, you're here for me, huh? Devora warned me about something like this. But don't get too ahead of yourself. Let's see if you're worth my time. Grab only the real tickets and prove you’re legit."
+text = "Hah, how tedious. I’m superior to you; there's nothing I desire from you except your departure. But… if you can manage to tame the serpent Mephistopheles entrusted me with, then perhaps I'll entertain your nonsense."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

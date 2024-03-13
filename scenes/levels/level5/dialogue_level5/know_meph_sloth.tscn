@@ -53,13 +53,13 @@ theme_override_constants/separation = 60
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Hoardaxia_Speech" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Speech" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Some activists crashed one of my meet and greets, totally enraged. Chaos erupted, and in the frenzy, I got trampled. When I woke up here in Hell, the big boss found me and pitched me a deal of a deathtime: a nice chunk of cash to keep doing what I did up there, but down here."
+text = "He visited me as I boarded a ship leaving Earth, which was dying anyway. I could've taken the beggars, but it wasn’t my fault they couldn't afford a ticket. I didn’t want to die on the ship, so Mephistopheles promised I wouldn't until the ship found a new planet. I spent 300 years in space, most of it alone, until the ship landed. Stepped out, died, and woke up here."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

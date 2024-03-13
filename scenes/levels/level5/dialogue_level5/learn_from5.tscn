@@ -55,13 +55,13 @@ theme_override_constants/separation = 60
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Hoardaxia_Speech" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Speech" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Oh, so you're here for me, huh? Devora mentioned something like this might happen. But hold up, let's test your skills first. Gotta weed out the fakes in this circus, you know? Grab all the real tickets and let's see if you're legit."
+text = "Learn from me? Well, I suppose I do possess a wealth of wisdom, given my affluent past. Now, I've got every comfort imaginable for the rest of my days. "
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
