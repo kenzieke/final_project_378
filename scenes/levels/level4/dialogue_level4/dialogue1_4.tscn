@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://sj77wivfl7dp"]
+[gd_scene load_steps=5 format=3 uid="uid://sj77wivfl7dp"]
 
+[ext_resource type="Script" path="res://scenes/levels/level4/dialogue_level4/dialogue1_4.gd" id="1_u3jfu"]
 [ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="4_hr4ue"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
@@ -16,6 +17,7 @@ offset_top = 320.0
 offset_right = 500.0
 offset_bottom = 320.0
 size_flags_horizontal = 4
+script = ExtResource("1_u3jfu")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1

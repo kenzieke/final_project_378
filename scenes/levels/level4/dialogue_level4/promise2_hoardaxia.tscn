@@ -8,7 +8,7 @@ font_names = PackedStringArray("Liberation Serif")
 [sub_resource type="SystemFont" id="SystemFont_g831j"]
 font_names = PackedStringArray("Liberation Serif")
 
-[node name="Promise1Hoardaxia" type="Control"]
+[node name="Promise2Hoardaxia" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 500.0
