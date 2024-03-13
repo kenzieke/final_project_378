@@ -1,4 +1,4 @@
-class_name DefeatYou5
+class_name LearnFrom
 extends Control
 
 @onready var start_button = $MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/Start_Button as Button

@@ -1,4 +1,4 @@
-class_name KnowMephSloth
+class_name InHellSloth
 extends Control
 
 @onready var question_1_button = $MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/Question1_Button as Button

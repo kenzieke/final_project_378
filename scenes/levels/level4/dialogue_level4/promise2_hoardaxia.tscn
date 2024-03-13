@@ -61,7 +61,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Oh, so we're talking a deal, huh? I'm not against considering a better offer, but you better be sure you can deliver. I've never really had anyone's trust before, so make sure it's worth betraying the boss's."
+text = "Alright, keep showing what you've got, and we'll see if you're worth counting on when the time comes."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -131,8 +131,7 @@ custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_g831j")
 theme_override_font_sizes/font_size = 24
-text = "When I take over the circus, you can be one of the main stars of the show,
-you’ll make way more money that way."
+text = "..."
 
 [node name="Level3Background" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_0b6eq")
