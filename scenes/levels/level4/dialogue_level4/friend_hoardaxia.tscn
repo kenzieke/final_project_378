@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://blrnyspo4jxcs"]
+[gd_scene load_steps=5 format=3 uid="uid://blrnyspo4jxcs"]
 
+[ext_resource type="Script" path="res://scenes/levels/level4/dialogue_level4/friend_hoardaxia.gd" id="1_2o56g"]
 [ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="4_oe7po"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
@@ -16,6 +17,7 @@ offset_top = 320.0
 offset_right = 500.0
 offset_bottom = 320.0
 size_flags_horizontal = 4
+script = ExtResource("1_2o56g")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1

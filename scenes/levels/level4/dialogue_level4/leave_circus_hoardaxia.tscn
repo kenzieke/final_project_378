@@ -19,7 +19,6 @@ offset_bottom = 320.0
 size_flags_horizontal = 4
 script = ExtResource("1_1c5sp")
 promise1 = null
-friend1 = null
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
