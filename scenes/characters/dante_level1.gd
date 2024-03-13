@@ -17,7 +17,7 @@ func _physics_process(delta):
 	
 	if (velocity.x > 1 || velocity.x < -1):
 		dante.animation = "walking"
-		walk_sound.play()
+		#walk_sound.play()
 		
 	else:
 		dante.animation = "idle"

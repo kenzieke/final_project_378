@@ -13,15 +13,6 @@ var score
 const promise_end = preload("res://scenes/levels/level2/dialogue_scenes/promise_end.tscn")
 const friend_end = preload("res://scenes/levels/level2/dialogue_scenes/friend_end.tscn")
 
-# Called when the node enters the scene tree for the first time.
-#func _ready():
-	#pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-	#pass
-
 
 func game_over():
 	score_timer.stop()
@@ -30,13 +21,13 @@ func game_over():
 	knife_sounds.stop()
 
 func new_game():
-		score = 0
-		player.start(start_position.position)
-		start_timer.start()
-		hud.update_score(score)
-		hud.show_message("Get Ready")
-		get_tree().call_group("knives", "queue_free")
-		knife_sounds.play()
+	score = 0
+	player.start(start_position.position)
+	start_timer.start()
+	hud.update_score(score)
+	hud.show_message("Get Ready")
+	get_tree().call_group("knives", "queue_free")
+	knife_sounds.play()
 
 func _on_knife_timer_timeout():
 	# Create a new instance of the Mob scene.
@@ -70,7 +61,7 @@ func pick_end_scene():
 func _on_score_timer_timeout():
 	score += 1
 	hud.update_score(score)
-	if score == 60:
+	if score == 30:
 		pick_end_scene()
 
 func _on_start_timer_timeout():
