@@ -8,7 +8,6 @@ var screen_size # Size of the game window.
 var bullet_speed = 1000
 var bullet = preload("res://scenes/levels/level3/moving_objects/pie_bullets.tscn")
 
-
 func _ready():
 	screen_size = get_viewport_rect().size
 	
@@ -24,8 +23,8 @@ func _process(delta):
 		velocity.y -= 1
 
 	velocity = velocity.normalized() * speed
-		
-	position += velocity * delta
+
+	move_and_collide(velocity * delta)
 	position.x = clamp(position.x, $Camera2D.limit_left, $Camera2D.limit_right)
 	position.y = clamp(position.y, $Camera2D.limit_top, $Camera2D.limit_bottom)
 			
@@ -45,9 +44,9 @@ func fire():
 func restart_level():
 	get_tree().reload_current_scene()
 
-
 func _on_dante_collider_area_entered(area):
 	print("area collide: ", area.name)
 	if "Demons" in area.name:
+		print("restarting level")
 		restart_level()
 

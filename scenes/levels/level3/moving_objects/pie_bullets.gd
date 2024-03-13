@@ -15,7 +15,6 @@ func _on_bullet_area_area_entered(area):
 	if "Demons" in area.name:
 		queue_free()
 
-
 func _on_timer_timeout():
 	queue_free()
 
