@@ -8,7 +8,7 @@ extends Control
 @export var know_meph_hoardaxia = preload("res://scenes/levels/level4/dialogue_level4/know_meph_hoardaxia.tscn") as PackedScene
 
 func _ready():
-	question_1_button.button_down.connect(in_hell_hoardaxia)
+	question_1_button.button_down.connect(on_hell_hoardaxia_pressed)
 	question_2_button.button_down.connect(on_know_meph_hoardaxia)
 
 func on_hell_hoardaxia_pressed() -> void:
