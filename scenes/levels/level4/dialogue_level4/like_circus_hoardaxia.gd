@@ -1,4 +1,4 @@
-class_name LikeCircusSloth
+class_name LikeCircusHoardaxia
 extends Control
 
 @onready var promise_button = $MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/Promise_Button as Button
