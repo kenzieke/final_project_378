@@ -15,6 +15,7 @@ var total_targets = 5
 var spawned_targets = -1
 var target_alive = false
 var bad_target_alive = false
+const REQUIRED_ACCURACY = 75
 
 func _ready():
 	pass
@@ -28,8 +29,12 @@ func _process(delta):
 		bad_timer.stop()
 		target.position = Vector2i(-100, -100)
 		bad_target.position = Vector2i(-100, -100)
+		if (accuracy >= REQUIRED_ACCURACY):
+			# TODO: winning game over scene
+			pass
+		else: # didn't meet accuracy requirement, restart level
+			restart_level()
 		return
-		# TODO gameover logic to continue to next
 	elif (lives <= 0):
 		restart_level()
 	else: # game still going
