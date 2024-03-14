@@ -7,6 +7,7 @@ extends Node2D
 @onready var wait_timer = $TargetSpawner
 @onready var respawn_timer = $Target/RespawnTimer
 @onready var bad_timer = $BadTargetSpawner
+@export var HOARDAXIA_POST_GAME = preload("res://scenes/levels/level4/dialogue_level4/hoardaxia_post_game.tscn") as PackedScene
 var mouse_targeted_target = false
 var mouse_targeted_bad_target = false
 var lives = 3
@@ -30,8 +31,7 @@ func _process(delta):
 		target.position = Vector2i(-100, -100)
 		bad_target.position = Vector2i(-100, -100)
 		if (accuracy >= REQUIRED_ACCURACY):
-			# TODO: winning game over scene
-			pass
+			get_tree().change_scene_to_packed(HOARDAXIA_POST_GAME)
 		else: # didn't meet accuracy requirement, restart level
 			restart_level()
 		return

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d8nsfpb1myn2"]
+[gd_scene load_steps=6 format=3 uid="uid://d8nsfpb1myn2"]
 
 [ext_resource type="Script" path="res://scenes/levels/level4/dialogue_level4/learn_from.gd" id="1_f81ui"]
+[ext_resource type="Texture2D" uid="uid://beaeikimgqcck" path="res://scenes/levels/level4/assets/Greed_BG.png" id="2_qov8b"]
 [ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="4_beq7r"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
@@ -31,6 +32,7 @@ offset_right = 595.0
 offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_qov8b")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
