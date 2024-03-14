@@ -1,50 +1,53 @@
-[gd_scene load_steps=4 format=3 uid="uid://ci1oflhreenmu"]
+[gd_scene load_steps=7 format=3 uid="uid://ci1oflhreenmu"]
 
-[ext_resource type="Script" path="res://scenes/levels/level4/Target.gd" id="1_waorg"]
-[ext_resource type="Script" path="res://scenes/levels/level4/BadTarget.gd" id="2_hf37j"]
+[ext_resource type="Texture2D" uid="uid://s3nle78iir38" path="res://scenes/levels/level4/assets/Greed_Game_BG.png" id="1_bdelo"]
+[ext_resource type="Script" path="res://scenes/levels/level4/level4.gd" id="1_vaijh"]
+[ext_resource type="Texture2D" uid="uid://ifb1qr3hw2o4" path="res://scenes/levels/level4/assets/GoodTicket.png" id="2_aota8"]
+[ext_resource type="Texture2D" uid="uid://cfp0fi7afxq4e" path="res://scenes/levels/level4/assets/BadTicket.png" id="4_pe1bv"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pcn4f"]
-size = Vector2(40, 40)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hayi7"]
+size = Vector2(67, 36)
 
-[node name="Level" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p016c"]
+size = Vector2(123, 68)
 
-[node name="Target" type="Area2D" parent="."]
-priority = 1
-script = ExtResource("1_waorg")
+[node name="Level4" type="Node2D"]
+script = ExtResource("1_vaijh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Target"]
-z_index = 1
-position = Vector2(578, 327)
-shape = SubResource("RectangleShape2D_pcn4f")
-
-[node name="ColorRect" type="ColorRect" parent="Target"]
+[node name="TextureRect" type="TextureRect" parent="."]
 z_index = -1
-offset_left = 558.0
-offset_top = 307.0
-offset_right = 598.0
-offset_bottom = 347.0
-mouse_filter = 1
-color = Color(0.94902, 0, 0.192157, 1)
+texture_filter = 1
+offset_right = 1000.0
+offset_bottom = 648.0
+texture = ExtResource("1_bdelo")
 
 [node name="BadTarget" type="Area2D" parent="."]
+z_index = 1
+position = Vector2(396, 241)
 priority = 1
-script = ExtResource("2_hf37j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BadTarget"]
-z_index = 1
-position = Vector2(578, 327)
-shape = SubResource("RectangleShape2D_pcn4f")
+shape = SubResource("RectangleShape2D_hayi7")
 
-[node name="ColorRect" type="ColorRect" parent="BadTarget"]
-z_index = -1
-offset_left = 558.0
-offset_top = 307.0
-offset_right = 598.0
-offset_bottom = 347.0
-mouse_filter = 1
-color = Color(0, 0.568627, 0.247059, 1)
+[node name="Sprite2D" type="Sprite2D" parent="BadTarget"]
+texture_filter = 1
+scale = Vector2(2.17647, 2.17647)
+texture = ExtResource("4_pe1bv")
 
-[connection signal="mouse_entered" from="Target" to="Target" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Target" to="Target" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="BadTarget" to="BadTarget" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="BadTarget" to="BadTarget" method="_on_mouse_exited"]
+[node name="Target" type="Area2D" parent="."]
+position = Vector2(171, 34)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Target"]
+position = Vector2(45.5, 25)
+shape = SubResource("RectangleShape2D_p016c")
+
+[node name="Sprite2D" type="Sprite2D" parent="Target"]
+texture_filter = 1
+position = Vector2(45.1324, 24.75)
+scale = Vector2(3.91176, 3.91176)
+texture = ExtResource("2_aota8")
+
+[connection signal="mouse_entered" from="BadTarget" to="." method="_on_bad_target_mouse_entered"]
+[connection signal="mouse_exited" from="BadTarget" to="." method="_on_bad_target_mouse_exited"]
+[connection signal="mouse_entered" from="Target" to="." method="_on_target_mouse_entered"]
+[connection signal="mouse_exited" from="Target" to="." method="_on_target_mouse_exited"]
