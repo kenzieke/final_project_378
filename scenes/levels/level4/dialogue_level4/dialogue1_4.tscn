@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://sj77wivfl7dp"]
+[gd_scene load_steps=7 format=3 uid="uid://sj77wivfl7dp"]
 
 [ext_resource type="Script" path="res://scenes/levels/level4/dialogue_level4/dialogue1_4.gd" id="1_u3jfu"]
 [ext_resource type="Texture2D" uid="uid://beaeikimgqcck" path="res://scenes/levels/level4/assets/Greed_BG.png" id="2_qsmog"]
+[ext_resource type="PackedScene" uid="uid://du27okwwc4ijj" path="res://scenes/levels/level4/characters/hoardaxia.tscn" id="3_cbaw8"]
 [ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="4_hr4ue"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
@@ -33,6 +34,9 @@ offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_qsmog")
+
+[node name="Hoardaxia" parent="." instance=ExtResource("3_cbaw8")]
+position = Vector2(-249, 197)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

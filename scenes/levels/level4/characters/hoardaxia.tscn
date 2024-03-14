@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://du27okwwc4ijj"]
+
+[ext_resource type="Texture2D" uid="uid://rumootibrgqx" path="res://scenes/levels/level4/assets/Dragon_Idle.png" id="1_8bm48"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_en52v"]
+atlas = ExtResource("1_8bm48")
+region = Rect2(0, 0, 93, 67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p510v"]
+atlas = ExtResource("1_8bm48")
+region = Rect2(93, 0, 93, 67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scdx4"]
+atlas = ExtResource("1_8bm48")
+region = Rect2(186, 0, 93, 67)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hj0mx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_en52v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p510v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scdx4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Hoardaxia" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(229.724, -68)
+scale = Vector2(5.9403, 5.9403)
+sprite_frames = SubResource("SpriteFrames_hj0mx")
+autoplay = "default"
+frame_progress = 0.0751314
