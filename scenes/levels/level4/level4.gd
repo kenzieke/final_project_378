@@ -4,36 +4,83 @@ extends Node2D
 @onready var target = $Target
 @onready var bad_target = $BadTarget
 @onready var target_size = $Target/CollisionShape2D.shape.size
+@onready var wait_timer = $TargetSpawner
+@onready var respawn_timer = $Target/RespawnTimer
+@onready var bad_timer = $BadTargetSpawner
 var mouse_targeted_target = false
 var mouse_targeted_bad_target = false
 var lives = 3
 var wins = 0
-
-func get_new_target_pos():
-	var pos = Vector2(randi_range(0, winsize.x - target_size.x), randi_range(0, winsize.y - target_size.y))
-	print("gen'd pos ", pos)
-	return pos
+var total_targets = 5
+var spawned_targets = -1
+var target_alive = false
+var bad_target_alive = false
 
 func _ready():
+	pass
+	
+func _process(delta):
+	if (spawned_targets >= total_targets):
+		var accuracy = (float(wins) / float(total_targets)) * 100.0
+		print("GAME OVER! Accuracy: ", accuracy)
+		respawn_timer.stop()
+		wait_timer.stop()
+		bad_timer.stop()
+		target.position = Vector2i(-100, -100)
+		bad_target.position = Vector2i(-100, -100)
+		return
+		# TODO gameover logic to continue to next
+	elif (lives <= 0):
+		restart_level()
+	else: # game still going
+		if (!target_alive): # start spawning of target
+			print("starting timer")
+			wait_timer.wait_time = randf_range(0.2, 1.2)
+			wait_timer.start()
+			target_alive = true
+		if (!bad_target_alive): # start spawning of abd target
+			bad_timer.wait_time = randf_range(2.0, 5.0)
+			bad_timer.start()
+			bad_target_alive = true
+
+func _spawn_target():
+	spawned_targets += 1
+	target.position = get_new_target_pos()
+	target_alive = true
+	respawn_timer.wait_time = randf_range(3.0, 4.0)
+	respawn_timer.start()
+
+func _spawn_bad_target():
 	var new_pos = get_new_target_pos()
 	bad_target.position = new_pos
+	bad_target_alive = true
 
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed and (mouse_targeted_target or mouse_targeted_bad_target):
 			var new_pos = get_new_target_pos()
 			if (mouse_targeted_target): # good target
-				print("yes")
-				target.position = new_pos;
+				target.position = Vector2i(-100, -100)
 				wins += 1
+				target_alive = false
 			elif (mouse_targeted_bad_target): # bad target
-				bad_target.position = new_pos
+				bad_target.position = Vector2i(-100, -100)
 				lives -= 1
 				print("Don't kill friendlies! Lives: ", lives)
-				if lives <= 0:
-					print("You died!")
-					lives = 3
-					get_tree().reload_current_scene()
+
+func get_new_target_pos():
+	var pos = Vector2(randi_range(target_size.x, winsize.x - (target_size.x * 1.8)), randi_range(target_size.y, winsize.y - (target_size.y * 1.8)))
+	#print("gen'd pos ", pos)
+	return pos
+
+func restart_level():
+	print("YOU LOST!")
+	lives = 3
+	wins = 0
+	spawned_targets = 0
+	target_alive = false
+	bad_target_alive = false
+	get_tree().reload_current_scene()
 
 func _on_target_mouse_entered():
 	mouse_targeted_target = true
