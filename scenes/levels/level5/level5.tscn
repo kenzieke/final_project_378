@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://3pnfw3rnerm5"]
 
-[ext_resource type="Script" path="res://scenes/levels/level5/FallingObject.gd" id="1_jc57q"]
+[ext_resource type="Script" path="res://scenes/levels/level5/level5.gd" id="1_du6gr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hkr2d"]
 size = Vector2(40, 40)
 
 [node name="Level5" type="Node2D"]
+script = ExtResource("1_du6gr")
 
 [node name="FallingObject" type="Area2D" parent="."]
 position = Vector2(471, 22)
-script = ExtResource("1_jc57q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallingObject"]
 position = Vector2(0, 2)
@@ -22,7 +22,7 @@ offset_right = 20.0
 offset_bottom = 22.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Timer" type="Timer" parent="FallingObject"]
+[node name="FallingTimer" type="Timer" parent="FallingObject"]
 wait_time = 1.5
 
-[connection signal="timeout" from="FallingObject/Timer" to="FallingObject" method="_on_timer_timeout"]
+[connection signal="timeout" from="FallingObject/FallingTimer" to="." method="_on_falling_timer_timeout"]

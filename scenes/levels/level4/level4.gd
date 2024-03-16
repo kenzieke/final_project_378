@@ -12,7 +12,7 @@ var mouse_targeted_target = false
 var mouse_targeted_bad_target = false
 var lives = 3
 var wins = 0
-var total_targets = 5
+var total_targets = 15
 var spawned_targets = -1
 var target_alive = false
 var bad_target_alive = false
@@ -98,4 +98,3 @@ func _on_bad_target_mouse_entered():
 
 func _on_bad_target_mouse_exited():
 	mouse_targeted_bad_target = false
-
