@@ -2,6 +2,9 @@ extends Node2D
 
 @onready var flying_dante = $FlyingDante
 @onready var ground = $Ground
+@export var fire_scene : PackedScene
+@onready var fire_timer = $FireTimer
+#const FIRE = preload("res://scenes/levels/level6/objects/fire.tscn")	
 
 var game_running : bool
 var game_over : bool
@@ -17,6 +20,7 @@ const FIRE_RANGE : int = 200
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_window().size
+	ground_height = ground.get_node("Sprite2D").texture.get_height()
 	new_game()
 
 func new_game():
@@ -24,6 +28,8 @@ func new_game():
 	game_over = false
 	score = 0
 	scroll = 0
+	pipes.clear()
+	generate_pipes()
 	flying_dante.reset()
 	
 func _input(event):
@@ -35,6 +41,7 @@ func _input(event):
 				else:
 					if flying_dante.flying:
 						flying_dante.flap()
+						fire_timer.start()
 
 func start_game():
 	game_running = true
@@ -47,4 +54,21 @@ func _process(delta):
 		scroll += SCROLL_SPEED
 		if scroll >= screen_size.x:
 			scroll = 0
-			ground.position.x = -scroll
+		ground.position.x = -scroll
+		for pipe in pipes:
+			pipe.position.x -= SCROLL_SPEED
+
+
+func _on_fire_timer_timeout():
+	generate_pipes()
+	
+func generate_pipes():
+	var pipe = fire_scene.instantiate()
+	pipe.position.x = screen_size.x + FIRE_DELAY
+	pipe.position.y = (screen_size.y - ground_height) / 2 + randi_range(-FIRE_RANGE, FIRE_RANGE)
+	pipe.hit.connect(dante_hit)
+	add_child(pipe)
+	pipes.append(pipe)
+
+func dante_hit():
+	pass

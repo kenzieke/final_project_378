@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7i1sf1bb304t"]
+[gd_scene load_steps=6 format=3 uid="uid://c7i1sf1bb304t"]
 
 [ext_resource type="Script" path="res://scenes/levels/level6/objects/fire.gd" id="1_5w8x5"]
 [ext_resource type="Texture2D" uid="uid://dmfu0wfaqk5bp" path="res://scenes/levels/level6/assets/firewall1.png" id="1_fko57"]
@@ -19,48 +19,60 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lakgi"]
-size = Vector2(119.5, 287.5)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_c3waw"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_fko57")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_n7lsn")
-}],
-"loop": true,
-"name": &"default",
-"speed": 3.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qvm6q"]
-size = Vector2(45.5191, 57.7912)
+size = Vector2(119.5, 319)
 
 [node name="Fire" type="Area2D"]
+position = Vector2(-8, 922)
 script = ExtResource("1_5w8x5")
 
 [node name="Upper" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(82, 80)
-scale = Vector2(2.5625, 4.49219)
+position = Vector2(91.984, -361)
+scale = Vector2(2.562, 5)
 sprite_frames = SubResource("SpriteFrames_xvwkm")
 autoplay = "default"
-frame_progress = 0.902056
+frame_progress = 0.320903
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(80.25, 80)
+position = Vector2(89.984, -361.5)
 shape = SubResource("RectangleShape2D_lakgi")
 
-[node name="Lower" type="AnimatedSprite2D" parent="."]
+[node name="Upper2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(82, 622)
-scale = Vector2(2.562, 4.492)
-sprite_frames = SubResource("SpriteFrames_c3waw")
-frame_progress = 0.78759
+position = Vector2(89.984, -534.625)
+scale = Vector2(2.562, 5)
+sprite_frames = SubResource("SpriteFrames_xvwkm")
+autoplay = "default"
+frame_progress = 0.00916191
+offset = Vector2(0, -75)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(80.69, 622.1)
-scale = Vector2(2.562, 4.98)
-shape = SubResource("RectangleShape2D_qvm6q")
+position = Vector2(88, -909)
+shape = SubResource("RectangleShape2D_lakgi")
+
+[node name="Upper3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(518.984, -354)
+scale = Vector2(2.562, 5)
+sprite_frames = SubResource("SpriteFrames_xvwkm")
+autoplay = "default"
+frame_progress = 0.973554
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(516.984, -354.5)
+shape = SubResource("RectangleShape2D_lakgi")
+
+[node name="Upper4" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(517.984, -463)
+scale = Vector2(2.562, 5)
+sprite_frames = SubResource("SpriteFrames_xvwkm")
+autoplay = "default"
+frame_progress = 0.00916191
+offset = Vector2(0, -75)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(516, -837.375)
+shape = SubResource("RectangleShape2D_lakgi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
