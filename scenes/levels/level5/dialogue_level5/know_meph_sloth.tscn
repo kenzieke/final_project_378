@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://pfyb451as4m3"]
+[gd_scene load_steps=7 format=3 uid="uid://pfyb451as4m3"]
 
 [ext_resource type="Script" path="res://scenes/levels/level5/dialogue_level5/know_meph_sloth.gd" id="1_m2b7l"]
 [ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="2_30ygp"]
 [ext_resource type="Texture2D" uid="uid://dnb2x580rvqnb" path="res://scenes/levels/level5/assets/Sloth_BG.png" id="2_sa52j"]
+[ext_resource type="PackedScene" uid="uid://fitc5ab018iy" path="res://scenes/levels/level5/characters/lazzaro.tscn" id="3_j2q3a"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -33,6 +34,10 @@ offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_sa52j")
+
+[node name="Lazzaro" parent="." instance=ExtResource("3_j2q3a")]
+position = Vector2(-81, 50)
+scale = Vector2(4.41012, 4.41012)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

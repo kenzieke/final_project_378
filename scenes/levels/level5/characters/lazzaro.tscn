@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://fitc5ab018iy"]
+
+[ext_resource type="Texture2D" uid="uid://b373vjla622jy" path="res://scenes/levels/level5/assets/Sloth_Idle.png" id="1_c0ces"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bh80r"]
+atlas = ExtResource("1_c0ces")
+region = Rect2(0, 0, 39, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n74v7"]
+atlas = ExtResource("1_c0ces")
+region = Rect2(39, 0, 39, 41)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_667xw"]
+atlas = ExtResource("1_c0ces")
+region = Rect2(78, 0, 39, 41)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dfpgu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bh80r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n74v7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_667xw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Lazzaro" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(20.25, 21.2885)
+scale = Vector2(2.03846, 2.03846)
+sprite_frames = SubResource("SpriteFrames_dfpgu")
+autoplay = "default"
+frame_progress = 0.688335
