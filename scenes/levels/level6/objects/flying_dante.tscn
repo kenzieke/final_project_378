@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ccykcxkankpo0"]
 
 [ext_resource type="Texture2D" uid="uid://dwtsui7ug5gde" path="res://scenes/levels/level6/assets/flame_boots.png" id="1_muhnq"]
-[ext_resource type="Script" path="res://scenes/levels/level6/characters/flying_dante.gd" id="1_tejc6"]
+[ext_resource type="Script" path="res://scenes/levels/level6/objects/flying_dante.gd" id="1_tejc6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t3e8b"]
 atlas = ExtResource("1_muhnq")
@@ -16,12 +16,30 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t3e8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3dl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3e8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3dl2")
 }],
 "loop": true,
 "name": &"default",
-"speed": 1.0
+"speed": 3.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3dl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3dl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3dl2")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_o3dl2")
 }],
@@ -40,6 +58,7 @@ script = ExtResource("1_tejc6")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_j4iao")
 autoplay = "default"
+frame_progress = 0.825712
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-33, -12)

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvitv6p2lqrhv"]
+
+[ext_resource type="Script" path="res://scenes/levels/level6/objects/ground.gd" id="1_hqje6"]
+[ext_resource type="Texture2D" uid="uid://cr2uix3bt7yx0" path="res://scenes/levels/level6/assets/lavaground.jpg" id="2_2jeed"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swr6p"]
+size = Vector2(9469, 446)
+
+[node name="Ground" type="Area2D"]
+script = ExtResource("1_hqje6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-21550.3, 223.5)
+scale = Vector2(26.2821, 1.23056)
+texture = ExtResource("2_2jeed")
+offset = Vector2(1000, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4734.5, 223)
+shape = SubResource("RectangleShape2D_swr6p")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bv57ly7jnldk7"]
+[gd_scene load_steps=5 format=3 uid="uid://bv57ly7jnldk7"]
 
 [ext_resource type="Script" path="res://scenes/levels/level6/level6.gd" id="1_0258p"]
 [ext_resource type="Texture2D" uid="uid://x3xqfyo3wy8a" path="res://scenes/levels/level6/assets/hell_background_level6.jpg" id="1_bmh4b"]
-[ext_resource type="PackedScene" uid="uid://ccykcxkankpo0" path="res://scenes/levels/level6/characters/flying_dante.tscn" id="3_j5f0r"]
+[ext_resource type="PackedScene" uid="uid://ccykcxkankpo0" path="res://scenes/levels/level6/objects/flying_dante.tscn" id="3_j5f0r"]
+[ext_resource type="PackedScene" uid="uid://dvitv6p2lqrhv" path="res://scenes/levels/level6/objects/ground.tscn" id="4_yee0b"]
 
 [node name="Level6" type="Node2D"]
 script = ExtResource("1_0258p")
@@ -16,3 +17,6 @@ texture = ExtResource("1_bmh4b")
 [node name="FlyingDante" parent="." instance=ExtResource("3_j5f0r")]
 position = Vector2(48, 265)
 scale = Vector2(0.210756, 0.210756)
+
+[node name="Ground" parent="." instance=ExtResource("4_yee0b")]
+position = Vector2(-1, 649)

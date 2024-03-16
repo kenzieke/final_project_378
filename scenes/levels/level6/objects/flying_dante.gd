@@ -25,6 +25,7 @@ func _physics_process(delta):
 			velocity.y = MAX_VELOCITY
 		if flying:
 			set_rotation(deg_to_rad(velocity.y * 0.05))
+			dante_flying.animation == "jet"
 			dante_flying.play()
 		elif falling:
 			set_rotation(PI/2)
@@ -34,4 +35,5 @@ func _physics_process(delta):
 		dante_flying.stop()
 		
 func flap():
+	dante_flying.animation == "jet" # not working
 	velocity.y = JET_SPEED

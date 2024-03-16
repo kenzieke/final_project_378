@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=3 uid="uid://c7i1sf1bb304t"]
+
+[ext_resource type="Script" path="res://scenes/levels/level6/objects/fire.gd" id="1_5w8x5"]
+[ext_resource type="Texture2D" uid="uid://dmfu0wfaqk5bp" path="res://scenes/levels/level6/assets/firewall1.png" id="1_fko57"]
+[ext_resource type="Texture2D" uid="uid://tawa05mmih7y" path="res://scenes/levels/level6/assets/firewall2.png" id="2_n7lsn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xvwkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fko57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_n7lsn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lakgi"]
+size = Vector2(119.5, 287.5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c3waw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fko57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_n7lsn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qvm6q"]
+size = Vector2(45.5191, 57.7912)
+
+[node name="Fire" type="Area2D"]
+script = ExtResource("1_5w8x5")
+
+[node name="Upper" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(82, 80)
+scale = Vector2(2.5625, 4.49219)
+sprite_frames = SubResource("SpriteFrames_xvwkm")
+autoplay = "default"
+frame_progress = 0.902056
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(80.25, 80)
+shape = SubResource("RectangleShape2D_lakgi")
+
+[node name="Lower" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(82, 622)
+scale = Vector2(2.562, 4.492)
+sprite_frames = SubResource("SpriteFrames_c3waw")
+frame_progress = 0.78759
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(80.69, 622.1)
+scale = Vector2(2.562, 4.98)
+shape = SubResource("RectangleShape2D_qvm6q")
