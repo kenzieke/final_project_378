@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpdxvmelj1rsw"]
+[gd_scene load_steps=7 format=3 uid="uid://bpdxvmelj1rsw"]
 
 [ext_resource type="Script" path="res://scenes/levels/level6/dialogue_level6/post_game.gd" id="1_28jg1"]
-[ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="4_cagq6"]
+[ext_resource type="Texture2D" uid="uid://dkl6d043emdra" path="res://scenes/levels/level6/assets/Lust_BG.png" id="2_87p02"]
+[ext_resource type="PackedScene" uid="uid://mb5afekxop2d" path="res://scenes/levels/level6/objects/cravyn.tscn" id="3_h1doa"]
+[ext_resource type="AudioStream" uid="uid://mf61l7px40wt" path="res://audio/circus-march-163813.mp3" id="4_vqqf4"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -33,6 +35,10 @@ offset_right = 595.0
 offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_87p02")
+
+[node name="Cravyn" parent="." instance=ExtResource("3_h1doa")]
+position = Vector2(-99, -80)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -148,6 +154,6 @@ theme_override_fonts/font = SubResource("SystemFont_g831j")
 theme_override_font_sizes/font_size = 24
 text = "HOW DO YOU KNOW MEPHISTOPHELES?"
 
-[node name="Level3Background" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_cagq6")
+[node name="Level6Background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_vqqf4")
 autoplay = true

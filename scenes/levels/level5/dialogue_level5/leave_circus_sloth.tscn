@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scenes/levels/level5/dialogue_level5/leave_circus_sloth.gd" id="1_mt6lc"]
 [ext_resource type="Texture2D" uid="uid://dnb2x580rvqnb" path="res://scenes/levels/level5/assets/Sloth_BG.png" id="2_bv82g"]
-[ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="2_wonwj"]
 [ext_resource type="PackedScene" uid="uid://fitc5ab018iy" path="res://scenes/levels/level5/characters/lazzaro.tscn" id="3_dnv6e"]
+[ext_resource type="AudioStream" uid="uid://ifniy7nhiio6" path="res://audio/silent-movie-old-record-version-164255.mp3" id="4_ltl5r"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -155,6 +155,6 @@ theme_override_fonts/font = SubResource("SystemFont_g831j")
 theme_override_font_sizes/font_size = 24
 text = "LET'S BE FRIENDS"
 
-[node name="Level3Background" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_wonwj")
+[node name="Level5Background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ltl5r")
 autoplay = true

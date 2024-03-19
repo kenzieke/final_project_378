@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://mb5afekxop2d"]
+
+[ext_resource type="Texture2D" uid="uid://b8km0uhhewxgk" path="res://scenes/levels/level6/assets/Lust_Idle.png" id="1_hemkg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qehad"]
+atlas = ExtResource("1_hemkg")
+region = Rect2(0, 0, 58, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07w6t"]
+atlas = ExtResource("1_hemkg")
+region = Rect2(58, 0, 58, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ticnh"]
+atlas = ExtResource("1_hemkg")
+region = Rect2(116, 0, 58, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5vq1"]
+atlas = ExtResource("1_hemkg")
+region = Rect2(174, 0, 58, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trvf6"]
+atlas = ExtResource("1_hemkg")
+region = Rect2(232, 0, 58, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j06kg"]
+atlas = ExtResource("1_hemkg")
+region = Rect2(290, 0, 58, 78)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0n4x7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qehad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07w6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ticnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5vq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trvf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j06kg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="Cravyn" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(142, 190.966)
+scale = Vector2(4.89655, 4.89655)
+sprite_frames = SubResource("SpriteFrames_0n4x7")
+frame_progress = 0.6323

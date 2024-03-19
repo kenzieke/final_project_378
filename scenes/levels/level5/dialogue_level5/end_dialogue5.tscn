@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://weh1vx27bajy"]
+[gd_scene load_steps=7 format=3 uid="uid://weh1vx27bajy"]
 
 [ext_resource type="Texture2D" uid="uid://dnb2x580rvqnb" path="res://scenes/levels/level5/assets/Sloth_BG.png" id="1_3uajs"]
-[ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="1_4xut5"]
+[ext_resource type="Script" path="res://scenes/levels/level5/dialogue_level5/end_dialogue5.gd" id="1_rjrkk"]
 [ext_resource type="PackedScene" uid="uid://fitc5ab018iy" path="res://scenes/levels/level5/characters/lazzaro.tscn" id="2_4l83y"]
+[ext_resource type="AudioStream" uid="uid://ifniy7nhiio6" path="res://audio/silent-movie-old-record-version-164255.mp3" id="4_0cf1h"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -18,6 +19,7 @@ offset_top = 320.0
 offset_right = 500.0
 offset_bottom = 320.0
 size_flags_horizontal = 4
+script = ExtResource("1_rjrkk")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -139,6 +141,6 @@ theme_override_font_sizes/font_size = 24
 text = "...
 "
 
-[node name="Level3Background" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_4xut5")
+[node name="Level5Background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_0cf1h")
 autoplay = true
