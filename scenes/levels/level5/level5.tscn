@@ -12,7 +12,7 @@ size = Vector2(40, 40)
 script = ExtResource("1_du6gr")
 
 [node name="FallingObject" type="Area2D" parent="."]
-position = Vector2(471, 22)
+position = Vector2(469, -135)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallingObject"]
 position = Vector2(20, 20)
@@ -40,7 +40,7 @@ position = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_a5rfp")
 
 [node name="MoveTimer" type="Timer" parent="Player"]
-wait_time = 0.23
+wait_time = 0.15
 one_shot = true
 
 [connection signal="timeout" from="FallingObject/FallingTimer" to="." method="_on_falling_timer_timeout"]
