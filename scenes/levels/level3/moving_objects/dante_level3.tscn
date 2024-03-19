@@ -1,59 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://bgjf7gb52da0u"]
+[gd_scene load_steps=3 format=3 uid="uid://bgjf7gb52da0u"]
 
 [ext_resource type="Script" path="res://scenes/levels/level3/moving_objects/dante_level3.gd" id="1_v5wmj"]
-[ext_resource type="Texture2D" uid="uid://drikya5tuacmr" path="res://scenes/levels/level3/images_level3/centered_car_dante.png" id="2_8a2lf"]
-[ext_resource type="Texture2D" uid="uid://mhw02bt8157e" path="res://scenes/levels/level3/images_level3/light.png" id="5_mlfw0"]
-[ext_resource type="AudioStream" uid="uid://cyr8h21r7pjnu" path="res://audio/squeaky-toy-1-6059.mp3" id="10_4dgwi"]
-[ext_resource type="AudioStream" uid="uid://dxorvkxsmku5b" path="res://audio/funny-spring-jump-140378.mp3" id="11_qbdah"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hv60r"]
 size = Vector2(45, 76.75)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ao4t"]
-size = Vector2(24.8412, 18.259)
-
 [node name="DanteLevel3" type="CharacterBody2D"]
 script = ExtResource("1_v5wmj")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(3.8147e-06, 0)
-scale = Vector2(3.1875, 3.1875)
-texture = ExtResource("2_8a2lf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hv60r")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_4dgwi")
-volume_db = -20.0
-
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("11_qbdah")
-volume_db = -15.0
-
-[node name="DanteCollider" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DanteCollider"]
-position = Vector2(-9.23872e-07, 2.11596e-06)
-scale = Vector2(1.93227, 4.3814)
-shape = SubResource("RectangleShape2D_4ao4t")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.6, 0.6)
-position_smoothing_enabled = true
-rotation_smoothing_enabled = true
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(-9, -30)
-color = Color(1, 1, 0, 1)
-shadow_enabled = true
-texture = ExtResource("5_mlfw0")
-
-[node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(13, -30)
-color = Color(1, 1, 0, 1)
-shadow_enabled = true
-texture = ExtResource("5_mlfw0")
-
-[connection signal="area_entered" from="DanteCollider" to="." method="_on_dante_collider_area_entered"]
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.235294, 0.490196, 1, 1)

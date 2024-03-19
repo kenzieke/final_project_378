@@ -13,7 +13,7 @@ var score
 const SCROLL_SPEED : int = 4
 var screen_size : Vector2i
 var ground_height : int
-var pipes : Array
+var pipes : Array 
 const FIRE_DELAY : int = 100
 const FIRE_RANGE : int = 200
 

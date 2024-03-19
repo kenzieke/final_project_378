@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://3pnfw3rnerm5"]
+[gd_scene load_steps=4 format=3 uid="uid://3pnfw3rnerm5"]
 
 [ext_resource type="Script" path="res://scenes/levels/level5/level5.gd" id="1_du6gr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hkr2d"]
+size = Vector2(40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5rfp"]
 size = Vector2(40, 40)
 
 [node name="Level5" type="Node2D"]
@@ -12,17 +15,33 @@ script = ExtResource("1_du6gr")
 position = Vector2(471, 22)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallingObject"]
-position = Vector2(0, 2)
+position = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_hkr2d")
 
 [node name="ColorRect" type="ColorRect" parent="FallingObject"]
-offset_left = -20.0
-offset_top = -18.0
-offset_right = 20.0
-offset_bottom = 22.0
+offset_right = 40.0
+offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
 [node name="FallingTimer" type="Timer" parent="FallingObject"]
 wait_time = 1.5
 
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(481, 412)
+
+[node name="ColorRect" type="ColorRect" parent="Player"]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.172549, 0.411765, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_a5rfp")
+
+[node name="MoveTimer" type="Timer" parent="Player"]
+wait_time = 0.23
+one_shot = true
+
 [connection signal="timeout" from="FallingObject/FallingTimer" to="." method="_on_falling_timer_timeout"]
+[connection signal="timeout" from="Player/MoveTimer" to="." method="_on_move_timer_timeout"]
