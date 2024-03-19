@@ -5,6 +5,7 @@ extends Node2D
 @onready var faller = $FallingObject
 @onready var player = $Player
 @onready var window_size = get_viewport_rect().size
+@export var post_game = preload("res://scenes/levels/level5/dialogue_level5/sloth_post_game.tscn") as PackedScene
 
 var init_speed = 15
 var target_speed = init_speed
@@ -91,3 +92,6 @@ func player_moved():
 
 func _on_move_timer_timeout():
 	player_may_move = true
+	
+#TODO: when the game is over, link the correct next scene with this line of code:
+#get_tree().change_scene_to_packed(post_game)

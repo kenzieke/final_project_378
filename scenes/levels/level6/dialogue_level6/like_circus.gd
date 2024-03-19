@@ -1,4 +1,4 @@
-class_name LeaveCircus
+class_name LikeCircus
 extends Control
 
 @onready var promise_button = $MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/Promise_Button as Button

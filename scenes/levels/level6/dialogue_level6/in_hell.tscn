@@ -1,17 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://dh8a1uyjccqn3"]
+[gd_scene load_steps=4 format=3 uid="uid://fwo7t406xpw2"]
 
-[ext_resource type="Script" path="res://scenes/levels/level5/dialogue_level5/defeat_you5.gd" id="1_3wdui"]
-[ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="1_oogoe"]
-[ext_resource type="Texture2D" uid="uid://dnb2x580rvqnb" path="res://scenes/levels/level5/assets/Sloth_BG.png" id="2_8ve51"]
-[ext_resource type="PackedScene" uid="uid://fitc5ab018iy" path="res://scenes/levels/level5/characters/lazzaro.tscn" id="4_hqlhm"]
+[ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="1_50kyx"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
 
-[sub_resource type="SystemFont" id="SystemFont_g831j"]
+[sub_resource type="SystemFont" id="SystemFont_gse10"]
 font_names = PackedStringArray("Liberation Serif")
 
-[node name="DefeatYou5" type="Control"]
+[node name="InHell" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 500.0
@@ -19,8 +16,6 @@ offset_top = 320.0
 offset_right = 500.0
 offset_bottom = 320.0
 size_flags_horizontal = 4
-script = ExtResource("1_3wdui")
-level5 = null
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -34,11 +29,6 @@ offset_right = 595.0
 offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_8ve51")
-
-[node name="Lazzaro" parent="." instance=ExtResource("4_hqlhm")]
-position = Vector2(-81, 50)
-scale = Vector2(4.41012, 4.41012)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -69,7 +59,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Hah, how tedious. I’m superior to you; there's nothing I desire from you except your departure. But… if you can manage to tame the serpent Mephistopheles entrusted me with, then perhaps I'll entertain your nonsense."
+text = "No idea! I lived life flawlessly: born into wealth and enjoyed my days living off my inheritance! No need for school, work, or even interacting with others. The money was mine, and I saw no fault in indulging solely in myself."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -137,13 +127,23 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Start_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="Question1_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
-theme_override_fonts/font = SubResource("SystemFont_g831j")
+theme_override_fonts/font = SubResource("SystemFont_gse10")
 theme_override_font_sizes/font_size = 24
-text = "Start Game"
+text = "DO YOU LIKE THE CIRCUS?"
+
+[node name="Seperator20" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Question2_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(120, 32)
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_gse10")
+theme_override_font_sizes/font_size = 24
+text = "WOULD YOU LEAVE THE CIRCUS?"
 
 [node name="Level3Background" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_oogoe")
+stream = ExtResource("1_50kyx")
 autoplay = true
