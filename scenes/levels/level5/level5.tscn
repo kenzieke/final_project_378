@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://3pnfw3rnerm5"]
+[gd_scene load_steps=5 format=3 uid="uid://3pnfw3rnerm5"]
 
 [ext_resource type="Script" path="res://scenes/levels/level5/level5.gd" id="1_du6gr"]
+[ext_resource type="AudioStream" uid="uid://cknd3f4gnmojs" path="res://audio/the-circus-marched-down-bourbon-street-new-orleans-jazz-192179.mp3" id="2_kru6u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hkr2d"]
 size = Vector2(40, 40)
@@ -42,6 +43,10 @@ shape = SubResource("RectangleShape2D_a5rfp")
 [node name="MoveTimer" type="Timer" parent="Player"]
 wait_time = 0.15
 one_shot = true
+
+[node name="Level5Background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_kru6u")
+autoplay = true
 
 [connection signal="timeout" from="FallingObject/FallingTimer" to="." method="_on_falling_timer_timeout"]
 [connection signal="timeout" from="Player/MoveTimer" to="." method="_on_move_timer_timeout"]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bpaa1mblsd58h"]
 
-[ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="1_0b6eq"]
 [ext_resource type="Script" path="res://scenes/levels/level4/dialogue_level4/promise2_hoardaxia.gd" id="1_aqj73"]
 [ext_resource type="Texture2D" uid="uid://beaeikimgqcck" path="res://scenes/levels/level4/assets/Greed_BG.png" id="2_0cjnf"]
 [ext_resource type="PackedScene" uid="uid://du27okwwc4ijj" path="res://scenes/levels/level4/characters/hoardaxia.tscn" id="3_8qbyd"]
+[ext_resource type="AudioStream" uid="uid://btqg786cbyxui" path="res://audio/black-circus-music-32096.mp3" id="4_it4n5"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -139,6 +139,6 @@ theme_override_fonts/font = SubResource("SystemFont_g831j")
 theme_override_font_sizes/font_size = 24
 text = "..."
 
-[node name="Level3Background" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_0b6eq")
+[node name="Level4Background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_it4n5")
 autoplay = true
