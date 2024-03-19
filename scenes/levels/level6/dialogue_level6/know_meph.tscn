@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://djf7bf3uj7nof"]
+[gd_scene load_steps=6 format=3 uid="uid://djf7bf3uj7nof"]
 
 [ext_resource type="Script" path="res://scenes/levels/level6/dialogue_level6/know_meph.gd" id="1_06e7w"]
 [ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="2_8y5dg"]
+[ext_resource type="Texture2D" uid="uid://dkl6d043emdra" path="res://scenes/levels/level6/assets/Lust_BG.png" id="2_o8hoi"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -33,6 +34,7 @@ offset_right = 595.0
 offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_o8hoi")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
