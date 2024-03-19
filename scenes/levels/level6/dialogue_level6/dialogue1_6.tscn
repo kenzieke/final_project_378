@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnxsbaiito6ih"]
+[gd_scene load_steps=6 format=3 uid="uid://bnxsbaiito6ih"]
 
 [ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="1_f3qtl"]
 [ext_resource type="Script" path="res://scenes/levels/level6/dialogue_level6/dialogue1_6.gd" id="1_lyjdw"]
+[ext_resource type="Texture2D" uid="uid://dkl6d043emdra" path="res://scenes/levels/level6/assets/Lust_BG.png" id="2_m5t05"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -33,6 +34,7 @@ offset_right = 595.0
 offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_m5t05")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -63,7 +65,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Who are you? What kind of nuisance has Hoardaxia sent my way now? Oh, wait, are you the masseuse that Mephistopheles promised?"
+text = "Well, Dante, how good to see you! I knew you'd give into your desires and visit me eventually. Here to learn from me or defeat me?"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

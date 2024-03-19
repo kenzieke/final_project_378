@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c30rscxmgitju"]
 
-[ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="3_lrmb7"]
+[ext_resource type="AudioStream" uid="uid://cmclhc2jglc6" path="res://scenes/levels/level3/audio_level3/cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="1_6rhum"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -8,7 +8,7 @@ font_names = PackedStringArray("Liberation Serif")
 [sub_resource type="SystemFont" id="SystemFont_g831j"]
 font_names = PackedStringArray("Liberation Serif")
 
-[node name="EndDialogue5" type="Control"]
+[node name="EndDialogue6" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 500.0
@@ -59,7 +59,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Ahem, I'm awake. Well, thanks for the snake. Now, unkindly go bother someone else. Cravyn… *yawn*… is known… for assisting people with their desiresss… zzzzz."
+text = "It seems Mephistopheles calls for his favored pet. I suggest you heed the summons. Reflect on whether your cravings justified your decisions."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -133,5 +133,5 @@ text = "...
 "
 
 [node name="Level3Background" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_lrmb7")
+stream = ExtResource("1_6rhum")
 autoplay = true

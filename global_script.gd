@@ -11,3 +11,5 @@ var promise_hoardaxia = 0
 var friend_hoardaxia = 0
 var friend_sloth = 0
 var promise_sloth = 0
+var friend_lust = 0
+var promise_lust = 0

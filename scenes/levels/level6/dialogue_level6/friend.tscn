@@ -62,7 +62,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Friendship sounds like far too much effort, and I detest the very notion. Frankly, you're boring me. I have no interest in friends; I'd much rather take a nap. But if it'll persuade you to depart and there's something in it for me... fine, sure… zzz…"
+text = "I find a certain joy in seeing others' desires come to fruition. I'll offer my friendship, but temper your expectations—there's always a chance it might be turned against you. Friendships expose our vulnerabilities."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -135,7 +135,7 @@ custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_g831j")
 theme_override_font_sizes/font_size = 24
-text = "You won’t regret this, you’ll see there are things worth caring about down here!"
+text = "..."
 
 [node name="Level3Background" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_ms1ip")

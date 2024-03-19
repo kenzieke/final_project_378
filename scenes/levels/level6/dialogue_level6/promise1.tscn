@@ -59,7 +59,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "Seems like too much effort. Perhaps I should inform Mephistopheles of your activities? I'm certain he'd find it quite intriguing to learn about the other little serpent in the circus."
+text = "Your progress thus far indicates you possess something I desire. I'm willing to extend you a promise, should you seek it. Yet, fail to meet my expectations, and you risk transforming a potential ally into a formidable adversary."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -129,9 +129,7 @@ custom_minimum_size = Vector2(120, 32)
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_g831j")
 theme_override_font_sizes/font_size = 24
-text = "You’re too lazy to tattle on me to Mephistopheles.
-Join me, and you'll never lift a finger again. Indulge freely, no interruptions.
-With me, you rule, untouched."
+text = "..."
 
 [node name="Level3Background" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_5b4vo")

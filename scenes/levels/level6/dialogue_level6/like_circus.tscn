@@ -55,13 +55,13 @@ theme_override_constants/separation = 60
 [node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="sSpeech" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Speech" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = SubResource("SystemFont_jy5gg")
 theme_override_font_sizes/font_size = 32
-text = "I don't really like anything. But I don't have to do much work, so I tolerate it."
+text = "The circus serves as my realm of amusement, a place where I can indulge in the torment of souls for sport. My specialty here? Hypnosis. Unconventional for circus fare, perhaps, but Hell's denizens revel in the spectacle of humiliation. And what greater shame is there than laying bare your most guarded secrets?"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

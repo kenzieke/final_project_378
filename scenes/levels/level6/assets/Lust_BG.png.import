@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x3xqfyo3wy8a"
-path="res://.godot/imported/hell_background_level6.jpg-e934f39bd67ae5b68a2887ae30b80145.ctex"
+uid="uid://dkl6d043emdra"
+path="res://.godot/imported/Lust_BG.png-ca0ce3b95c0b7be45672e1d7d883d150.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/level6/assets/hell_background_level6.jpg"
-dest_files=["res://.godot/imported/hell_background_level6.jpg-e934f39bd67ae5b68a2887ae30b80145.ctex"]
+source_file="res://scenes/levels/level6/assets/Lust_BG.png"
+dest_files=["res://.godot/imported/Lust_BG.png-ca0ce3b95c0b7be45672e1d7d883d150.ctex"]
 
 [params]
 
