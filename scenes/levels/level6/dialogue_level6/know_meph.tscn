@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://djf7bf3uj7nof"]
 
-[ext_resource type="Script" path="res://scenes/levels/level6/dialogue_level6/know_meph.gd" id="1_06e7w"]
+[ext_resource type="Script" path="res://scenes/levels/level6/dialogue_level6/know_meph6.gd" id="1_4b5pa"]
 [ext_resource type="Texture2D" uid="uid://dkl6d043emdra" path="res://scenes/levels/level6/assets/Lust_BG.png" id="2_o8hoi"]
 [ext_resource type="PackedScene" uid="uid://mb5afekxop2d" path="res://scenes/levels/level6/objects/cravyn.tscn" id="3_w8ryj"]
 [ext_resource type="AudioStream" uid="uid://mf61l7px40wt" path="res://audio/circus-march-163813.mp3" id="4_ulca4"]
@@ -19,7 +19,7 @@ offset_top = 320.0
 offset_right = 500.0
 offset_bottom = 320.0
 size_flags_horizontal = 4
-script = ExtResource("1_06e7w")
+script = ExtResource("1_4b5pa")
 like_circus = null
 leave_circus = null
 

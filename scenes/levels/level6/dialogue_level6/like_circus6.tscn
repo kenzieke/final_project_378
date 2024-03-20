@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://c5fws528jd2tv"]
 
-[ext_resource type="Script" path="res://scenes/levels/level6/dialogue_level6/like_circus.gd" id="1_of5a1"]
-[ext_resource type="Texture2D" uid="uid://dkl6d043emdra" path="res://scenes/levels/level6/assets/Lust_BG.png" id="2_cbm0a"]
-[ext_resource type="PackedScene" uid="uid://mb5afekxop2d" path="res://scenes/levels/level6/objects/cravyn.tscn" id="3_xc565"]
-[ext_resource type="AudioStream" uid="uid://mf61l7px40wt" path="res://audio/circus-march-163813.mp3" id="4_a4n6l"]
+[ext_resource type="Script" path="res://scenes/levels/level6/dialogue_level6/like_circus6.gd" id="1_8h6k4"]
+[ext_resource type="Texture2D" uid="uid://dkl6d043emdra" path="res://scenes/levels/level6/assets/Lust_BG.png" id="2_cw4ab"]
+[ext_resource type="PackedScene" uid="uid://mb5afekxop2d" path="res://scenes/levels/level6/objects/cravyn.tscn" id="3_udjb0"]
+[ext_resource type="AudioStream" uid="uid://mf61l7px40wt" path="res://audio/circus-march-163813.mp3" id="4_to64f"]
 
 [sub_resource type="SystemFont" id="SystemFont_jy5gg"]
 font_names = PackedStringArray("Liberation Serif")
@@ -19,7 +19,7 @@ offset_top = 320.0
 offset_right = 500.0
 offset_bottom = 320.0
 size_flags_horizontal = 4
-script = ExtResource("1_of5a1")
+script = ExtResource("1_8h6k4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -33,9 +33,9 @@ offset_right = 595.0
 offset_bottom = 328.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_cbm0a")
+texture = ExtResource("2_cw4ab")
 
-[node name="Cravyn" parent="." instance=ExtResource("3_xc565")]
+[node name="Cravyn" parent="." instance=ExtResource("3_udjb0")]
 position = Vector2(-99, -80)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -153,5 +153,5 @@ theme_override_font_sizes/font_size = 24
 text = "LET'S BE FRIENDS"
 
 [node name="Level6Background" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_a4n6l")
+stream = ExtResource("4_to64f")
 autoplay = true

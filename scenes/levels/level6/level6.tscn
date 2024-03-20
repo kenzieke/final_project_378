@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bv57ly7jnldk7"]
+[gd_scene load_steps=8 format=3 uid="uid://bv57ly7jnldk7"]
 
 [ext_resource type="Script" path="res://scenes/levels/level6/level6.gd" id="1_0258p"]
 [ext_resource type="PackedScene" uid="uid://c7i1sf1bb304t" path="res://scenes/levels/level6/objects/fire.tscn" id="2_eg88c"]
@@ -6,23 +6,26 @@
 [ext_resource type="Texture2D" uid="uid://dkl6d043emdra" path="res://scenes/levels/level6/assets/Lust_BG.png" id="3_r248e"]
 [ext_resource type="PackedScene" uid="uid://dvitv6p2lqrhv" path="res://scenes/levels/level6/objects/ground.tscn" id="4_yee0b"]
 [ext_resource type="AudioStream" uid="uid://mf61l7px40wt" path="res://audio/circus-march-163813.mp3" id="6_qk1pw"]
+[ext_resource type="PackedScene" uid="uid://3wdr041ycgwa" path="res://scenes/levels/level6/objects/pipe.tscn" id="6_qmycr"]
 
 [node name="Level6" type="Node2D"]
 script = ExtResource("1_0258p")
 fire_scene = ExtResource("2_eg88c")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1142.75, 629.195)
 scale = Vector2(12.7961, 12.7961)
 texture = ExtResource("3_r248e")
 
 [node name="FlyingDante" parent="." instance=ExtResource("3_j5f0r")]
-position = Vector2(48, 265)
+position = Vector2(60, 268)
 scale = Vector2(0.210756, 0.210756)
 
 [node name="Ground" parent="." instance=ExtResource("4_yee0b")]
-position = Vector2(-1, 649)
+position = Vector2(-10, 614)
+
+[node name="Pipe" parent="." instance=ExtResource("6_qmycr")]
 
 [node name="FireTimer" type="Timer" parent="."]
 wait_time = 1.5

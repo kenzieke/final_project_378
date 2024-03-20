@@ -54,7 +54,7 @@ func _process(delta):
 		scroll += SCROLL_SPEED
 		if scroll >= screen_size.x:
 			scroll = 0
-		ground.position.x = -scroll
+		ground.position.x = -scroll # move ground
 		for pipe in pipes:
 			pipe.position.x -= SCROLL_SPEED
 
