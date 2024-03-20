@@ -1,43 +1,51 @@
-[gd_scene load_steps=5 format=3 uid="uid://3pnfw3rnerm5"]
+[gd_scene load_steps=8 format=3 uid="uid://3pnfw3rnerm5"]
 
 [ext_resource type="Script" path="res://scenes/levels/level5/level5.gd" id="1_du6gr"]
+[ext_resource type="Texture2D" uid="uid://c8bjeff7tqsrm" path="res://scenes/levels/level5/assets/Snake_preview.png" id="2_dp5pv"]
 [ext_resource type="AudioStream" uid="uid://cknd3f4gnmojs" path="res://audio/the-circus-marched-down-bourbon-street-new-orleans-jazz-192179.mp3" id="2_kru6u"]
+[ext_resource type="Texture2D" uid="uid://culfqle2ymp7p" path="res://scenes/levels/level2/images_level2/dante_walking_up.png" id="3_euh1s"]
+[ext_resource type="Texture2D" uid="uid://deuplpu5wbbjf" path="res://scenes/levels/level5/assets/note-7296802_960_720.png" id="3_kfj5v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hkr2d"]
-size = Vector2(40, 40)
+size = Vector2(90, 97)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a5rfp"]
-size = Vector2(40, 40)
+size = Vector2(71, 73)
 
 [node name="Level5" type="Node2D"]
 script = ExtResource("1_du6gr")
+
+[node name="SnakePreview" type="Sprite2D" parent="."]
+position = Vector2(496, 318)
+scale = Vector2(0.979008, 0.979007)
+texture = ExtResource("2_dp5pv")
 
 [node name="FallingObject" type="Area2D" parent="."]
 position = Vector2(469, -135)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallingObject"]
-position = Vector2(20, 20)
+position = Vector2(20, 17.5)
 shape = SubResource("RectangleShape2D_hkr2d")
 
-[node name="ColorRect" type="ColorRect" parent="FallingObject"]
-offset_right = 40.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+[node name="Note-7296802960720" type="Sprite2D" parent="FallingObject"]
+position = Vector2(18, 19)
+scale = Vector2(0.127431, 0.123958)
+texture = ExtResource("3_kfj5v")
 
 [node name="FallingTimer" type="Timer" parent="FallingObject"]
 wait_time = 1.5
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(481, 412)
+position = Vector2(480, 566)
 
-[node name="ColorRect" type="ColorRect" parent="Player"]
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0.172549, 0.411765, 1, 1)
-metadata/_edit_use_anchors_ = true
+[node name="DanteWalkingUp" type="Sprite2D" parent="Player"]
+position = Vector2(20, 20)
+scale = Vector2(0.343478, 0.343478)
+texture = ExtResource("3_euh1s")
+hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(20, 20)
+position = Vector2(19.5, 20.5)
 shape = SubResource("RectangleShape2D_a5rfp")
 
 [node name="MoveTimer" type="Timer" parent="Player"]

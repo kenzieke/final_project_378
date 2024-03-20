@@ -4,8 +4,8 @@ extends Control
 @onready var question_1_button = $MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/Question1_Button as Button
 @onready var question_2_button = $MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/Question2_Button as Button
 
-@export var like_circus = preload("res://scenes/levels/level6/dialogue_level6/like_circus.tscn") as PackedScene
-@export var leave_circus = preload("res://scenes/levels/level6/dialogue_level6/leave_circus.tscn") as PackedScene
+@export var like_circus = preload("res://scenes/levels/level6/dialogue_level6/like_circus6.tscn") as PackedScene
+@export var leave_circus = preload("res://scenes/levels/level6/dialogue_level6/leave_circus6.tscn") as PackedScene
 
 func _ready():
 	question_1_button.button_down.connect(on_like_circus_pressed)

@@ -7,7 +7,7 @@ extends Node2D
 @onready var window_size = get_viewport_rect().size
 @export var post_game = preload("res://scenes/levels/level5/dialogue_level5/sloth_post_game.tscn") as PackedScene
 
-var init_speed = 15
+var init_speed = 13
 var target_speed = init_speed
 var accel = 600
 var current_lane = 0
@@ -58,8 +58,7 @@ func _process(delta):
 	if points >= POINTS_TO_WIN:
 		print("GAMEOVER! You win!")
 		faller_timer.stop()
-		# TODO: game over, progress to next level
-		
+		get_tree().change_scene_to_packed(post_game)
 	if lost_points >= L_POINTS_TO_LOSE:
 		restart_level()
 
@@ -78,7 +77,6 @@ func target_fell(caught):
 		points += 1
 	elif not caught:
 		lost_points += 1
-	
 	
 	print(points)
 	faller.position.y = 0 - 4 * $FallingObject/CollisionShape2D.shape.extents.y
