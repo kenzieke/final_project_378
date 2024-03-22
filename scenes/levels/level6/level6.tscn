@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bv57ly7jnldk7"]
+[gd_scene load_steps=7 format=3 uid="uid://bv57ly7jnldk7"]
 
 [ext_resource type="Script" path="res://scenes/levels/level6/level6.gd" id="1_0258p"]
-[ext_resource type="PackedScene" uid="uid://c7i1sf1bb304t" path="res://scenes/levels/level6/objects/fire.tscn" id="2_eg88c"]
 [ext_resource type="PackedScene" uid="uid://ccykcxkankpo0" path="res://scenes/levels/level6/objects/flying_dante.tscn" id="3_j5f0r"]
 [ext_resource type="Texture2D" uid="uid://dkl6d043emdra" path="res://scenes/levels/level6/assets/Lust_BG.png" id="3_r248e"]
 [ext_resource type="PackedScene" uid="uid://dvitv6p2lqrhv" path="res://scenes/levels/level6/objects/ground.tscn" id="4_yee0b"]
@@ -10,7 +9,14 @@
 
 [node name="Level6" type="Node2D"]
 script = ExtResource("1_0258p")
-fire_scene = ExtResource("2_eg88c")
+fire_scene = ExtResource("6_qmycr")
+
+[node name="FireTimer" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="RestartTimer" type="Timer" parent="."]
+wait_time = 2.5
+autostart = true
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -23,15 +29,26 @@ position = Vector2(60, 268)
 scale = Vector2(0.210756, 0.210756)
 
 [node name="Ground" parent="." instance=ExtResource("4_yee0b")]
+z_index = 1
 position = Vector2(-10, 614)
-
-[node name="Pipe" parent="." instance=ExtResource("6_qmycr")]
-
-[node name="FireTimer" type="Timer" parent="."]
-wait_time = 1.5
 
 [node name="Level6Background" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_qk1pw")
 autoplay = true
 
+[node name="ScoreLabel" type="Label" parent="."]
+z_index = 2
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = -2.0
+offset_right = 150.0
+offset_bottom = 47.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "SCORE: 0"
+
 [connection signal="timeout" from="FireTimer" to="." method="_on_fire_timer_timeout"]
+[connection signal="timeout" from="RestartTimer" to="." method="_on_restart_timer_timeout"]
+[connection signal="hit" from="Ground" to="." method="_on_ground_hit"]

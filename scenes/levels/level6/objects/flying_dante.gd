@@ -2,9 +2,9 @@ extends CharacterBody2D
 
 @onready var dante_flying = $AnimatedSprite2D
 
-const GRAVITY : int = 1000
+const GRAVITY : int = 900
 const MAX_VELOCITY : int = 600
-const JET_SPEED : int = -500
+const JET_SPEED : int = -400
 var flying : bool = false
 var falling : bool = false
 const START_POS = Vector2(100, 400)
